@@ -13,7 +13,7 @@ int mod(int a, int b) {
   return ret;
 }
 
-int main() {
+int cesar() {
   char *buffer;
   FILE *f = fopen("./message.txt", "r");
   size_t size = 512;
