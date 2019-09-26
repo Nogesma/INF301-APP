@@ -1,4 +1,4 @@
-CC=clang
+CC=clang -Wall -g
 
 all: decrypte_v1
 
