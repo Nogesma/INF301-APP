@@ -1,0 +1,5 @@
+add_executable (decrypt decryption.c)
+add_executable (encrypt encryption.c)
+add_executable (cesar cesar.c)
+add_executable(encrypt-2 encryption-2.c)
+add_executable(decryption-2 decryption-2.c)

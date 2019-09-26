@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="encrypt-2">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt-2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="encrypt-2/fast">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt-2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cesar">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/cesar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 cesar"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cesar/fast">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/cesar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 cesar/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="decryption-2">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decryption-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decryption-2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="decryption-2/fast">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decryption-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decryption-2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="encrypt">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="encrypt/fast">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="decrypt">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decrypt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="decrypt/fast">
+				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decrypt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/cesar.c">
+			<Option target="cesar"/>
+		</Unit>
+		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/decryption-2.c">
+			<Option target="decryption-2"/>
+		</Unit>
+		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/decryption.c">
+			<Option target="decrypt"/>
+		</Unit>
+		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/encryption-2.c">
+			<Option target="encrypt-2"/>
+		</Unit>
+		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/encryption.c">
+			<Option target="encrypt"/>
+		</Unit>
+		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mano/Desktop/S3/INF301/Client c/decryption-2.c
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
