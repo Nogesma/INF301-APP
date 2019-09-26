@@ -1,14 +1,11 @@
 CC=clang
 CFLAGS=-Wall -g
 
-all: client-tutoriel
+all: crypteSeq
 
-client-interactif: client-interactif.o client.o
-
-client-tutoriel: client-tutoriel.o client.o crypt.o
-
-client-introduction: client-introduction.o client.o
-
+crypteSeq: client-tutoriel.o client.o crypt.o
+	clang $(CFLAGS) -o crypteSeq client-tutoriel.o client.o crypt.o
+	
 client.o: client.c client.h
 
 crypt.o : crypt.c crypt.h
