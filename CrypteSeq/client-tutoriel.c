@@ -32,7 +32,7 @@ int main() {
 
 
 
-    f = fopen("test.txt","rw");
+    f = fopen("message.txt","r");
 
     if(f == NULL) {
         printf("ERROR\n");
