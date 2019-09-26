@@ -1,0 +1,12 @@
+CC=clang
+
+all: planB
+
+client.o: client.c client.h
+	$(CC) -c client.c
+planB.o: planB.c client.h
+	$(CC) -c planB.c
+planB: planB.o client.o
+	$(CC) planB.o client.o -o planB
+clean:
+	rm -f planB *.o
