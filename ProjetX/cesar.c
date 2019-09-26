@@ -18,7 +18,7 @@ int cesar(char *buffer) {
   int diff = 'C' - buffer[0];
   int i = 0;
 
-  while (i < strlen(buffer)) {
+  while (buffer[i] != '\0') {
     if (isalpha(buffer[i])) {
       if (buffer[i] >= 'a')
         premiereLettre = 'a';
