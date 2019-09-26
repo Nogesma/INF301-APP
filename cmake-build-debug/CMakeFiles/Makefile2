@@ -44,10 +44,10 @@ RM = "/Users/mano/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mano/Desktop/S3/INF301/Client c"
+CMAKE_SOURCE_DIR = /Users/mano/Desktop/S3/INF301/APP1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -82,14 +82,14 @@ preinstall:
 CMakeFiles/encrypt-2.dir/all:
 	$(MAKE) -f CMakeFiles/encrypt-2.dir/build.make CMakeFiles/encrypt-2.dir/depend
 	$(MAKE) -f CMakeFiles/encrypt-2.dir/build.make CMakeFiles/encrypt-2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" --progress-num=9,10 "Built target encrypt-2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target encrypt-2"
 .PHONY : CMakeFiles/encrypt-2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/encrypt-2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/encrypt-2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/encrypt-2.dir/rule
 
 # Convenience name for target.
@@ -109,14 +109,14 @@ CMakeFiles/encrypt-2.dir/clean:
 CMakeFiles/cesar.dir/all:
 	$(MAKE) -f CMakeFiles/cesar.dir/build.make CMakeFiles/cesar.dir/depend
 	$(MAKE) -f CMakeFiles/cesar.dir/build.make CMakeFiles/cesar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target cesar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target cesar"
 .PHONY : CMakeFiles/cesar.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cesar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cesar.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/cesar.dir/rule
 
 # Convenience name for target.
@@ -136,14 +136,14 @@ CMakeFiles/cesar.dir/clean:
 CMakeFiles/decryption-2.dir/all:
 	$(MAKE) -f CMakeFiles/decryption-2.dir/build.make CMakeFiles/decryption-2.dir/depend
 	$(MAKE) -f CMakeFiles/decryption-2.dir/build.make CMakeFiles/decryption-2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target decryption-2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target decryption-2"
 .PHONY : CMakeFiles/decryption-2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/decryption-2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/decryption-2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/decryption-2.dir/rule
 
 # Convenience name for target.
@@ -163,14 +163,14 @@ CMakeFiles/decryption-2.dir/clean:
 CMakeFiles/encrypt.dir/all:
 	$(MAKE) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/depend
 	$(MAKE) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" --progress-num=7,8 "Built target encrypt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target encrypt"
 .PHONY : CMakeFiles/encrypt.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/encrypt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/encrypt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/encrypt.dir/rule
 
 # Convenience name for target.
@@ -190,14 +190,14 @@ CMakeFiles/encrypt.dir/clean:
 CMakeFiles/decrypt.dir/all:
 	$(MAKE) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/depend
 	$(MAKE) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target decrypt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target decrypt"
 .PHONY : CMakeFiles/decrypt.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/decrypt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/decrypt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/decrypt.dir/rule
 
 # Convenience name for target.

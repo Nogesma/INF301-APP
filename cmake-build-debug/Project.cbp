@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="encrypt-2">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt-2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/encrypt-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -42,15 +42,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt-2"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt-2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="encrypt-2/fast">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt-2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/encrypt-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -63,15 +63,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt-2/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt-2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cesar">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/cesar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/cesar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -84,15 +84,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 cesar"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 cesar"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cesar/fast">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/cesar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/cesar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -105,15 +105,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 cesar/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 cesar/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="decryption-2">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decryption-2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/decryption-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -126,15 +126,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decryption-2"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 decryption-2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="decryption-2/fast">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decryption-2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/decryption-2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -147,25 +147,25 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decryption-2/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 decryption-2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="encrypt">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/encrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -178,15 +178,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="encrypt/fast">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/encrypt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/encrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -199,15 +199,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 encrypt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="decrypt">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decrypt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/decrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -220,15 +220,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decrypt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 decrypt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="decrypt/fast">
-				<Option output="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/decrypt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug"/>
+				<Option output="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/decrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -241,29 +241,29 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 decrypt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/Client\ c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 decrypt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/cesar.c">
+		<Unit filename="/Users/mano/Desktop/S3/INF301/APP1/cesar.c">
 			<Option target="cesar"/>
 		</Unit>
-		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/decryption-2.c">
+		<Unit filename="/Users/mano/Desktop/S3/INF301/APP1/decryption-2.c">
 			<Option target="decryption-2"/>
 		</Unit>
-		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/decryption.c">
+		<Unit filename="/Users/mano/Desktop/S3/INF301/APP1/decryption.c">
 			<Option target="decrypt"/>
 		</Unit>
-		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/encryption-2.c">
+		<Unit filename="/Users/mano/Desktop/S3/INF301/APP1/encryption-2.c">
 			<Option target="encrypt-2"/>
 		</Unit>
-		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/encryption.c">
+		<Unit filename="/Users/mano/Desktop/S3/INF301/APP1/encryption.c">
 			<Option target="encrypt"/>
 		</Unit>
-		<Unit filename="/Users/mano/Desktop/S3/INF301/Client c/CMakeLists.txt">
+		<Unit filename="/Users/mano/Desktop/S3/INF301/APP1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

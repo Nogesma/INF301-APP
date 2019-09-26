@@ -1,7 +1,7 @@
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/encrypt-2.dir
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/cesar.dir
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/decryption-2.dir
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/encrypt.dir
-/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/decrypt.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/encrypt-2.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/cesar.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/decryption-2.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/encrypt.dir
+/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/decrypt.dir

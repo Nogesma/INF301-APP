@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/mano/Desktop/S3/INF301/Client c/encryption-2.c" "/Users/mano/Desktop/S3/INF301/Client c/cmake-build-debug/CMakeFiles/encrypt-2.dir/encryption-2.c.o"
+  "/Users/mano/Desktop/S3/INF301/APP1/encryption-2.c" "/Users/mano/Desktop/S3/INF301/APP1/cmake-build-debug/CMakeFiles/encrypt-2.dir/encryption-2.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 
