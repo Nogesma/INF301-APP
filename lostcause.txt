@@ -1,1 +1,62 @@
-Cher Bob, ,SirtuilSsuchsmcScagmhu'gSrmqt'rjucl'tqleucgBnqd'nhgspSdl'ctdlphu.dJS.sJcxSqpBnx lsnihvtlvsgqpvStlqiStpsi'ieasutLjiBia'ujJc'ay' ip ycvpylg'SvpuchS' pqShvS'ghx.ql've'gx .'uejJ.ixBCpyuSJBiely.lpeSu.xi CSuSCemx Cfxnpiuln xiSn'fCfxpfuliShuagplinLBhBLemglmhgpexcl' 'cfmhfqphm 'hpeBCBl.' chpe cs.Tqsi'xhpgqaxiqhaxhg fehSqgqSLTaei LxaeTfegLfgxmLpgsm jpLupesyeujyTuejSmeylmTlpmTepSTmeuTpxumCiBechctxuaftsifaxBLxlitlaSCiCtlgSaqpleyosl BtCLxBaeatCtoyqax'tBayqBigLqpyLutCtpy:h".JtpoJuTg tim Bom'CoT.JoCIn oxBfg BmeThs:cxg'cmtSqxgfxJ'nJqtm'mnJx t'LmhiB.mlmnLfJmBcBnLnipaBJonmBpamt faSpf'nLnSpysTC ILShxnxzoqvL'oavI'twzIqawzqNntzY'hkt–knN–wnwoNIBYiLIoki'ma–N!sys BaBnIcekaIBns YBNyALmaI.
+Cher Bob,
+
+Je suis inquiete, je crois que ton algorithme est trop previsible, je te 
+propose de l'ameliorer.  Voici mon idee :
+- je te propose de conserver ton algorithme a base de sequence, mais de 
+  stocker un peu plus de choses : pour chaque caractere, nous allons stocker 
+  en plus le caractere auquel il est associe (celui qui est utilise a sa place 
+  dans le texte encrypte)
+- la premiere fois qu'il est rencontre, lors de son insertion, un caractere 
+  est associe a lui meme
+- les fois suivantes, lorsqu'un caractere a deja ete vu, nous procederons 
+  comme dans ton algorithme, mais au lieu de remplacer le caractere en entree 
+  par le precedent dans la sequence, nous echangerons son association avec 
+  l'association du caractere precedent dans la sequence
+- le caractere de sortie est produit ensuite, apres insertion ou echange, en 
+  ecrivant l'association du caractere en entree
+- comme dans ton algorithme, l'association est ensuite deplacee en fin de 
+  sequence.
+
+J'ai essaye sur quelques messages, je pense que ce nouvel algorithme sera tres 
+difficile a craquer. Montre moi dans la suite de cet exercice que tu as compris 
+en renvoyant ce message code avec cet algorithme. Je t'enverrai alors mon 
+prochain message.
+
+Meilleurs sentiments,
+Alice.
+
+PS: Je pense avoir ete assez claire, mais voici tout de meme un exemple sur le 
+texte 'abcbcca'.
+
+Seq:    <vide>
+Output: <vide>
+
+Char: a
+Seq:    (a,a)
+Output: a
+
+Char: b
+Seq:    (a,a) (b,b)
+Output: ab
+
+Char: c
+Seq:    (a,a) (b,b) (c,c)
+Output: abc
+
+Char: b
+Seq:    (a,b) (c,c) (b,a)
+Output: abca
+
+Char: c
+Seq:    (a,c) (b,a) (c,b)
+Output: abcab
+
+Char: c
+Seq:    (a,c) (b,b) (c,a)
+Output: abcaba
+
+Char: a
+Seq:    (b,b) (c,c) (a,a)
+Output: abcabaa
+
+Output Final: abcabaa

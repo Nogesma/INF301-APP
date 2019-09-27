@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void append(char *s, char c) {
+void append2(char *s, char c) {
   unsigned long len = strlen(s);
   s[len] = c;
   s[len + 1] = '\0';
@@ -30,13 +30,13 @@ void encrypt(char c, char *sequence, char *encrypted) {
       indexInSeq = i;
 
   if (indexInSeq == -1) {
-    append(sequence, c);
-    append(encrypted, c);
+    append2(sequence, c);
+    append2(encrypted, c);
   } else {
     if (indexInSeq == 0) {
-      append(encrypted, sequence[strlen(sequence) - 1]);
+      append2(encrypted, sequence[strlen(sequence) - 1]);
     } else {
-      append(encrypted, sequence[indexInSeq - 1]);
+      append2(encrypted, sequence[indexInSeq - 1]);
     }
     end(sequence, indexInSeq);
   }

@@ -2,23 +2,15 @@
 // Created by Mano Ségransan on 20/09/2019.
 //
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
-struct Sequence {
-  int size;
-  char table[128][3];
-};
-
-void append(char *s, char c) {
+void append2(char *s, char c) {
   unsigned long len = strlen(s);
   s[len] = c;
   s[len + 1] = '\0';
 }
 
-void end(struct Sequence *s, int i) {
+void end2(struct Sequence *s, int i) {
   char c[3];
   strcpy(c, s->table[i]);
   int j;
@@ -52,35 +44,25 @@ void encrypt(char c, struct Sequence *s, char *encrypted) {
 
   if (indexInSeq == -1) {
     addSequence(s, c);
-    append(encrypted, c);
+    append2(encrypted, c);
   } else {
     if (indexInSeq == 0) {
       swap(s, 0, s->size - 1);
-      append(encrypted, s->table[0][1]);
+      append2(encrypted, s->table[0][1]);
     } else {
       swap(s, indexInSeq, indexInSeq - 1);
-      append(encrypted, s->table[indexInSeq][1]);
+      append2(encrypted, s->table[indexInSeq][1]);
     }
-    end(s, indexInSeq);
+    end2(s, indexInSeq);
   }
 }
 
-int main() {
-  char *encryptedMessage;
-  char *message;
+void encryption(char *encryptedMessage, char *message) {
+
   struct Sequence s;
   s.size = 0;
-  FILE *f = fopen("./lostcause3.txt", "r");
-  size_t size = 512;
-  message = (char *)malloc(size);
 
-  size = getdelim(&message, &size, '\0', f);
-
-  encryptedMessage = (char *)malloc(size);
-
-  for (unsigned long i = 0; i < size; i++) {
+  for (unsigned long i = 0; i < strlen(encryptedMessage); i++) {
     encrypt(message[i], &s, encryptedMessage);
   }
-  printf("%s", encryptedMessage);
-  return 0;
 }

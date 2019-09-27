@@ -12,13 +12,13 @@ struct Sequence {
   char table[128][3];
 };
 
-void append(char *s, char c) {
+void append2(char *s, char c) {
   unsigned long len = strlen(s);
   s[len] = c;
   s[len + 1] = '\0';
 }
 
-void end(struct Sequence *s, int i) {
+void end2(struct Sequence *s, int i) {
   char c[3];
   strcpy(c, s->table[i]);
   int j;
@@ -26,6 +26,16 @@ void end(struct Sequence *s, int i) {
     strcpy(s->table[j], s->table[j + 1]);
   }
   strcpy(s->table[j], c);
+}
+
+void begin(struct Sequence *s, int i) {
+  char c[3];
+  strcpy(c, s->table[i]);
+  int j;
+  for (j = i; j > 0; j--) {
+    strcpy(s->table[j], s->table[j - 1]);
+  }
+  strcpy(s->table[0], c);
 }
 
 void addSequence(struct Sequence *s, char c) {
@@ -53,16 +63,19 @@ void encrypt(char c, struct Sequence *s, char *encrypted) {
 
   if (indexInSeq == -1) {
     addSequence(s, c);
-    append(encrypted, c);
+    //    begin(s, s->size - 1);
+    append2(encrypted, c);
   } else {
-    if (indexInSeq == s->size - 1) {
-      swap(s, indexInSeq, 0);
-      append(encrypted, s->table[indexInSeq][1]);
+    if (indexInSeq == 0) {
+      swap(s, 0, s->size - 1);
+      append2(encrypted, s->table[0][1]);
+      //      begin(s, s->size - 1);
     } else {
       swap(s, indexInSeq, indexInSeq + 1);
-      append(encrypted, s->table[indexInSeq][1]);
-      end(s, indexInSeq);
+      append2(encrypted, s->table[indexInSeq][1]);
+      //      begin(s, indexInSeq);
     }
+    end2(s, indexInSeq);
   }
 }
 
@@ -71,7 +84,7 @@ int main() {
   char *message;
   struct Sequence s;
   s.size = 0;
-  FILE *f = fopen("./lostcause2.txt", "r");
+  FILE *f = fopen("./nothwoodcrypt.txt", "r");
   //  FILE *f = fopen("./nothwoodcrypt.txt", "w");
   size_t size = 512;
   message = (char *)malloc(size);

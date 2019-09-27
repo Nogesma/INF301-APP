@@ -2,7 +2,7 @@
 #define __CLIENT_H__
 
 /*
- * Pour modifier les couleurs d'affichage (certaines peuvent être difficile 
+ * Pour modifier les couleurs d'affichage (certaines peuvent être difficile
  * à lire selon les terminaux).
  * Couleurs possibles:
  * RED     - rouge
@@ -14,10 +14,9 @@
  * CYN     - cyan
  * WHT     - blanc
  */
-#define COL_ENVOI       GRN  /* couleur des messages envoyés */
-#define COL_RECU        MAG  /* couleur des messages reçus   */
-#define COL_ATTENTION   RED  /* couleur des messages importants */
-
+#define COL_ENVOI GRN     /* couleur des messages envoyés */
+#define COL_RECU MAG      /* couleur des messages reçus   */
+#define COL_ATTENTION RED /* couleur des messages importants */
 
 #define MAXREP 100000 /* taille maximale d'une réponse du serveur */
 
@@ -28,7 +27,7 @@
  * si les arguments sont NULL et 0, les valeurs par défaut sont utilisées.
  * Renvoie une valeur nulle (faux) en cas d'échec
  */
-int connexion(char*, int);
+int connexion(char *, int);
 /*
  * Permet la fermeture de la connection avec le serveur donné en argument
  */
