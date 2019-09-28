@@ -1,6 +1,3 @@
-//
-// Created by fabie on 19/09/2019.
-//
 #include "crypt.h"
 #include <stdio.h>
 #include <string.h>
@@ -19,6 +16,7 @@ Sequence stringToSeq(char *mess) {
 
   return seq;
 }
+
 int indexC(Sequence *cle, char c) {
   int i = 0;
   while (i < cle->longueur) {
@@ -39,9 +37,11 @@ int ajoutChar(Sequence *cle, char c) {
   }
   return -1;
 }
+
 void decaleFin(Sequence *s, long i) {
   char c = s->chaine[i];
   long j;
+
   for (j = i; j < s->longueur; j++) {
     s->chaine[j] = s->chaine[j + 1];
   }
@@ -87,7 +87,6 @@ Sequence crypt(Sequence *mess) {
       ajoutChar(&seq, c);
       ajoutChar(&crypt, c);
     }
-    // printf("%c\n%s\n%s\n\n",c,seq.chaine,crypt.chaine);
     i++;
   }
   return crypt;
@@ -123,20 +122,3 @@ Sequence decrypt(Sequence *mess) {
   }
   return decrypt;
 }
-
-/*int main() {
-    FILE *f;
-    Sequence messageCrypte = init();
-    Sequence message;
-
-    f = fopen("test.txt","w");
-
-    if(f == NULL) {
-        printf("ERROR\n");
-        return -1;
-    }
-
-    lectureFichier(f,&message);
-
-    messageCrypte = crypt(&message);
-}*/

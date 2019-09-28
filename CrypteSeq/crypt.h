@@ -1,14 +1,10 @@
-//
-// Created by fabie on 19/09/2019.
-//
-
 #ifndef CLIENT_C_CRYPTESEQ_CRYPT_H
 #define CLIENT_C_CRYPTESEQ_CRYPT_H
 
 #endif // CLIENT_C_CRYPTESEQ_CRYPT_H
 
 #include <stdio.h>
-#include <string.h>
+
 #define LMAX 100000
 
 typedef struct {

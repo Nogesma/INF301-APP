@@ -1,9 +1,7 @@
 #include "../client.h"
 #include "cesar.h"
-#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <string.h>
 
 #define MAXMSG MAXREP
 

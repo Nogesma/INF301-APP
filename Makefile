@@ -32,4 +32,4 @@ crypteSeq/crypt.o: crypteSeq/crypt.c
 Nothwoods/crypt.o: Nothwoods/crypt.c
 
 clean:
-	rm -f client.o **/*.o *_exec
+	rm -f **/**.o *_exec

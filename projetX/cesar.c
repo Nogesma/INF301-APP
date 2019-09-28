@@ -1,7 +1,3 @@
-//
-// Created by Mano Ségransan on 18/09/2019.
-//
-
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>

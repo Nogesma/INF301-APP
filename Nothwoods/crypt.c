@@ -1,7 +1,5 @@
 #include "crypt.h"
-#include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 void append(char *s, char c) {
@@ -41,9 +39,7 @@ void decrypt(char c, char *sequence, char *decrypted) {
 }
 
 void decryption(char *encryptedMessage, char *decryptedMessage) {
-  char *sequence;
-
-  sequence = (char *)malloc(128);
+  char sequence[128];
 
   for (long i = 0; i < strlen(encryptedMessage); i++) {
     decrypt(encryptedMessage[i], sequence, decryptedMessage);
