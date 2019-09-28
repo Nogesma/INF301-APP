@@ -27,50 +27,28 @@ void decrypte(char *message, char *reponse, int rang) {
 }
 
 int main() {
-  /*	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!! �viter le plus possible de modifier ce fichier !!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-      Modifications autoris�es :
-          * login et mdp
-
-      modifiez les variables ci-dessous: mettez vos identifiant et mot de passe
-   */
   char *login = "11800911";
   char *mdp = "SEGRANSAN";
-
-  /*	######################################
-      #  NE PLUS RIEN MODIFIER CI-DESSOUS  #
-      ######################################
-   */
 
   char reponse[MAXREP];
   char message[MAXMSG];
 
-  // Affiche les �changes avec le serveur (false pour d�sactiver)
   mode_debug(true);
 
   puts("Bienvenue dans le client interactif d'AppoLab");
-  puts("Connection � AppoLab dans le client interactif d'AppoLab ...");
+  puts("Connection à AppoLab dans le client interactif d'AppoLab ...");
 
   // Connexion au serveur AppoLab
   connexion("im2ag-appolab.u-ga.fr", 443);
-  /* connexion("im2ag-appolab.u-ga.fr", 443); */
 
   // LOGIN
-  if (strcmp(login, "") && strcmp(mdp, "")) {
-    printf("Identification de %s ...\n", login);
-    char user_logs[256];
-    snprintf(user_logs, sizeof user_logs, "%s %s %s", "login", login, mdp);
-    envoyer_recevoir(user_logs, reponse);
-    puts(reponse);
-  } else {
-    puts("Identifiez vous maintenant (login <login> <mot de passe>)");
-  }
+  printf("Identification de %s ...\n", login);
+  char user_logs[256];
+  snprintf(user_logs, sizeof user_logs, "%s %s %s", "login", login, mdp);
+  envoyer_recevoir(user_logs, reponse);
+  puts(reponse);
 
-  // Interaction
-  bool quit = false;
-
+  // INTERACTION
   envoyer_recevoir("load decrypte-v1", reponse);
   envoyer_recevoir("depart", reponse);
   for (int i = 0; i < 5; i++) {

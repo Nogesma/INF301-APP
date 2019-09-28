@@ -1,7 +1,3 @@
-//
-// Created by Mano Ségransan on 26/09/2019.
-//
-
 #ifndef APP1_DECRYPTION_H
 #define APP1_DECRYPTION_H
 
