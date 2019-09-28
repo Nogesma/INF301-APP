@@ -1,7 +1,7 @@
 CC=clang
 CFLAGS=-Wall -g
 
-all: projetX decrypte planB crypteSeq Nothwoods
+all: projetX decrypte planB crypteSeq Nothwoods LostCause
 
 # Create executables for all the exercises
 projetX: projetX projetX/cesar.o client.o
@@ -18,6 +18,9 @@ crypteSeq: crypteSeq/crypteSeq.c crypteSeq/crypt.o client.o
 
 Nothwoods: Nothwoods/Nothwoods.c Nothwoods/crypt.o client.o
 	$(CC) Nothwoods/Nothwoods.c Nothwoods/crypt.o client.o -o Nothwoods_exec
+
+LostCause: LostCause/LostCause.c client.o
+	$(CC) LostCause/LostCause.c client.o -o LostCause_exec
 
 # Files
 client.o: client.c
