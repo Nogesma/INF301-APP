@@ -10,3 +10,4 @@ struct Sequence {
 
 void encryption(char *encryptedMessage, char *message);
 void decryption(char *encryptedMessage, char *decryptedMessage);
+void decryption2(char *encryptedMessage, char *decryptedMessage);

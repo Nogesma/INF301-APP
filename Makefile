@@ -1,35 +1,43 @@
-CC=clang
+CC=clang $(CFLAGS)
 CFLAGS=-Wall -g
 
-all: projetX decrypte planB crypteSeq Nothwoods LostCause
+all: build projetX decrypte planB crypteSeq Nothwoods LostCause
 
 # Create executables for all the exercises
-projetX: projetX projetX/cesar.o client.o
-	$(CC) projetX/projetX.c projetX/cesar.o client.o -o projetX_exec
+projetX: cesar.o client.o
+	$(CC) src/projetX.c o/cesar.o o/client.o -o exec/projetX
 
-decrypte: decrypte-v1/decrypte-v1.c client.o
-	$(CC) decrypte-v1/decrypte-v1.c client.o -o decrypte-v1_exec
+decrypte: client.o
+	$(CC) src/decrypte-v1.c o/client.o -o exec/decrypte-v1
 
-planB: planB/planB.c client.o
-	$(CC) planB/planB.c client.o -o planB_exec
+planB: client.o
+	$(CC) src/planB.c o/client.o -o exec/planB
 
-crypteSeq: crypteSeq/crypteSeq.c crypteSeq/crypt.o client.o
-	$(CC) crypteSeq/crypteSeq.c crypteSeq/crypt.o client.o -o crypteSeq_exec
+crypteSeq: cryptSeq.o client.o
+	$(CC) src/crypteSeq.c o/crypteSeq.o o/client.o -o exec/crypteSeq
 
-Nothwoods: Nothwoods/Nothwoods.c Nothwoods/crypt.o client.o
-	$(CC) Nothwoods/Nothwoods.c Nothwoods/crypt.o client.o -o Nothwoods_exec
 
-LostCause: LostCause/LostCause.c client.o
-	$(CC) LostCause/LostCause.c client.o -o LostCause_exec
+Nothwoods: NothLost.o client.o
+	$(CC) src/Nothwoods.c o/NothLost.o o/client.o -o exec/Nothwoods
+
+LostCause: NothLost.o client.o
+	$(CC) src/LostCause.c o/NothLost.o o/client.o -o exec/LostCause
 
 # Files
 client.o: client.c
+	$(CC) -c client.c -o o/client.o
 
-projetX/cesar.o: projetX/cesar.c
+cesar.o: src/projetX/cesar.c
+	$(CC) -c src/projetX/cesar.c -o o/cesar.o
 
-crypteSeq/crypt.o: crypteSeq/crypt.c
+cryptSeq.o: src/crypteSeq/crypt.c
+	$(CC) -c src/crypteSeq/crypt.c -o o/crypteSeq.o
 
-Nothwoods/crypt.o: Nothwoods/crypt.c
+NothLost.o: src/NothLost/NothLost.c
+	$(CC) -c src/NothLost/NothLost.c -o o/NothLost.o
+
+build:
+	mkdir -p o exec
 
 clean:
-	rm -f **/**.o *_exec
+	rm -rf o exec

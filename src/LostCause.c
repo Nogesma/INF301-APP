@@ -1,10 +1,7 @@
 #include "../client.h"
-#include "crypt.h"
-#include <ctype.h>
+#include "NothLost/NothLost.h"
 #include <stdbool.h>
 #include <stdio.h>
-#include <string.h>
-
 #define MAXMSG MAXREP
 
 int main() {
@@ -13,8 +10,6 @@ int main() {
 
   char reponse[MAXREP];
   char message[MAXMSG];
-  FILE *f;
-  Sequence texte;
 
   puts("Bienvenue dans le client interactif d'AppoLab");
   puts("Connection à AppoLab dans le client interactif d'AppoLab ...");
@@ -32,20 +27,13 @@ int main() {
   puts(reponse);
 
   // INTERACTION
-  envoyer_recevoir("load crypteSeq", reponse);
+  envoyer_recevoir("load LostCause", reponse);
+  decryption2(reponse, message);
+  printf("\nMessage decrypte:\n\n%s\n", message);
   envoyer_recevoir("start", reponse);
-  f = fopen("crypteSeq/message.txt", "r");
-
-  if (f == NULL) {
-    printf("ERROR\n");
-    return -1;
-  }
-
-  lectureFichier(f, &texte);
-  texte.chaine[texte.longueur - 1] = '\0';
-  envoyer_recevoir(crypt(&texte).chaine, reponse);
-  Sequence aDecrypte = stringToSeq(&reponse[83]);
-  printf("\nVoici le message décrypté\n%s\n", decrypt(&aDecrypte).chaine);
+  decryption2(reponse, message);
+  printf("\nMessage decrypte:\n\n%s\n", message);
+  envoyer_recevoir("There will be no Nineteen Eighty-Four", reponse);
 
   return 0;
 }

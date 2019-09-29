@@ -1,5 +1,5 @@
 #include "../client.h"
-#include "crypt.h"
+#include "NothLost/NothLost.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -36,6 +36,9 @@ int main() {
   encryption(message, cryptedMessage);
   envoyer_recevoir("start", reponse);
   envoyer_recevoir(cryptedMessage, reponse);
+  decryption2(&reponse[81], message);
+
+  printf("\nMessage decrypte:\n\n%s\n", message);
 
   return 0;
 }
