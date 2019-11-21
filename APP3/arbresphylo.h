@@ -1,11 +1,7 @@
 #ifndef ARBRESPHYLO_H
 #define ARBRESPHYLO_H
 
-<<<<<<< HEAD
 #include "arbres.h"
-=======
-
->>>>>>> 94c9c001e9feeef494645aae982fd8675ba3e252
 #include "listes.h"
 
 /* Renvoie la hauteur de l'arbre passé en argument */
