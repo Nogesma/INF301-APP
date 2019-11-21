@@ -24,7 +24,6 @@ int estFeuille(arbre a){
 }
 
 void compter_rec(arbre a, int *nb_car, int *nb_esp){
-	if(a == NULL){exit(1);}
 	if(estFeuille(a)){
 		(*nb_esp) ++;
 	}
@@ -40,6 +39,7 @@ void compter_rec(arbre a, int *nb_car, int *nb_esp){
 }
 
 void compter(arbre a, int *nb_car, int *nb_esp){
+	if(a == NULL){exit(1);}
 	*nb_car = 0;
 	*nb_esp = 0;
 	compter_rec(a,nb_car,nb_esp); 
