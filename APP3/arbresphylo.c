@@ -13,7 +13,7 @@ int max(int a,int b){
 }
 
 int hauteur (arbre racine){
-  if (racine ==NULL)
+  if (racine ==NULL) //la racine est considérée de hauteur 1
     return 0;
   else
     return 1+max(hauteur(racine.droit),hauteur(racine.gauche));
