@@ -5,11 +5,18 @@
 #include "arbresphylo.h"
 #include "listes.h"
 
+int max(int a,int b){
+  if (a>=b)
+    return a;
+  else
+    return b;
+}
 
-
-int hauteur (arbre racine)
-{
-    /* à compléter */
+int hauteur (arbre racine){
+  if (racine ==NULL)
+    return 0;
+  else
+    return 1+max(hauteur(racine.droit),hauteur(racine.gauche));
 }
 
 

@@ -4,6 +4,7 @@
 #include "listes.h"
 
 /* Renvoie la hauteur de l'arbre passé en argument */
+int max(int a,int b);
 int hauteur (arbre racine);
 
 /* Recherche une espèce dans l'arbre et renvoie en argument
