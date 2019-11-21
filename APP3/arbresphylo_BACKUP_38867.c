@@ -14,6 +14,11 @@ int hauteur(arbre racine) {
   if (racine == NULL) // la racine est considérée de hauteur 1
     return 0;
   else
+<<<<<<< HEAD
+    return 1 + max(hauteur(racine->droit), hauteur(racine->gauche));
+}
+
+=======
     return 1+max(hauteur(racine->droit),hauteur(racine->gauche));
 }
 
@@ -43,6 +48,7 @@ void compter(arbre a, int *nb_car, int *nb_esp){
 	compter_rec(a,nb_car,nb_esp); 
 }
 
+>>>>>>> 94c9c001e9feeef494645aae982fd8675ba3e252
 /* ACTE II */
 /* Recherche l'espece dans l'arbre. Modifie la liste passée en paramètre pour y
  * mettre les caractéristiques. Retourne 0 si l'espèce a été retrouvée, 1 sinon.
