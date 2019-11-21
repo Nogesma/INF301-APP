@@ -16,7 +16,7 @@ int hauteur (arbre racine){
   if (racine ==NULL) //la racine est considérée de hauteur 1
     return 0;
   else
-    return 1+max(hauteur(racine.droit),hauteur(racine.gauche));
+    return 1+max(hauteur(racine->droit),hauteur(racine->gauche));
 }
 
 
@@ -26,9 +26,30 @@ int hauteur (arbre racine){
  * caractéristiques. Retourne 0 si l'espèce a été retrouvée, 1 sinon.
  * Définissez un type de retour approprié !
  */
-int rechercher_espece (arbre racine, char *espece, liste_t* seq)
-{
-    /* à compléter */
-    return -1;
+
+int recherche(arbre racine, char *espece, cellule_t *c) {
+  cellule_t *cc = nouvelleCellule();
+  if (racine->valeur == espece)
+    return 0;
+  if (racine == NULL || (racine->droit == NULL && racine->gauche == NULL))
+    return 1;
+  if (rechercher(racine->droit, espece, cc)) {
+  } else if (recherche(racine->gauche), espece, cc) {
+    c->suivant = cc cc->caract = racine->valeur;
+  }
+}
+
+int rechercher_espece(arbre racine, char *espece, liste_t* seq){
+  cellule_t *c = nouvelleCellule();
+  if (racine==NULL)
+    return 1;
+  if (racine->valeur==espece)
+    return 0;
+  else{
+    if (rechercher(racine->droit, espece, seq)) {}
+    else if (recherche(racine->gauche), espece, c) {
+      c->caract = racine->valeur;
+      seq->tete = c;
+    }
 }
 

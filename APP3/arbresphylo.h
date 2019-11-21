@@ -12,6 +12,7 @@ int hauteur (arbre racine);
  * Note: vous devez définir un type séquence approprié et modifier le 
  * type de retour de cette fonction.
  */
+int rechercher_esp(arbre racine, char *espece,liste_t* seq);
 int rechercher_espece (arbre racine, char *espece, liste_t* seq);
 
 
