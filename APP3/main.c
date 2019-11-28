@@ -50,8 +50,11 @@ int main(int argc, char* argv[])
     
     affiche_arbre (mon_arbre);
     printf ("Hauteur de l'arbre: %d\n", hauteur (mon_arbre));
-    
-    
+    char *espece = "autruche";
+    liste_t carac;
+    carac.tete = NULL;
+    rechercher_espece(mon_arbre,espece,&carac);
+    afficher(&carac);
     return 0;
 }
 
