@@ -1,5 +1,14 @@
-#ifndef _LISTES_H
-#define _LISTES_H
+#ifndef LISTES_H
+#define LISTES_H
+
+#include <stdbool.h>
+#define eprintf(...) fprintf(stderr, __VA_ARGS__)
+//
+// #define printf(fmt, ...) (0)
+// #define eprintf(fmt, ...) (0)
+// #define putchar(c) (0)
+
+#define TAILLE_MAX 5000
 
 struct cellule {
   char *caract;
@@ -18,3 +27,10 @@ typedef struct liste liste_t;
 cellule_t *nouvelleCellule();
 
 #endif /* _LISTES_H */
+
+extern bool silent_mode;
+
+void afficher(liste_t *seq);
+
+cellule_t *nouvelleCellule(void);
+void detruireCellule(cellule_t *cel);
