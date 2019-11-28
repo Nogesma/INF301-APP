@@ -2,7 +2,7 @@
 #define _LISTES_H
 
 struct cellule {
-  char caract;
+  char *caract;
   struct cellule *suivant;
 };
 
@@ -15,8 +15,6 @@ struct liste {
 typedef struct liste liste_t;
 /* Type de liste à compléter selon votre besoin. */
 
-
+cellule_t *nouvelleCellule();
 
 #endif /* _LISTES_H */
-
-
