@@ -18,7 +18,8 @@ void compter(arbre a, int *nb_car, int *nb_esp);
  * type de retour de cette fonction.
  */
 int rechercher_espece (arbre racine, char *espece, liste_t *seq);
-
+int rechercher_esp(arbre racine, char *espece,liste_t* seq);
+int rechercher_espece2(arbre racine, char *espece, liste_t* seq);
 
 
 #endif
