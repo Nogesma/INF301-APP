@@ -98,3 +98,7 @@ void ajout_espèce(arbre *a, char *esp,cellule car){
       printf("Ne peut ajouter %s : possède les mêmes caractères que %s",esp,car.valeur);
   }
 }
+
+void liste_carac(a){
+
+}
