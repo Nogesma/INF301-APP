@@ -50,9 +50,17 @@ void compter(arbre a, int *nb_car, int *nb_esp){
  * caractéristiques. Retourne 0 si l'espèce a été retrouvée, 1 sinon.
  * Définissez un type de retour approprié !
  */
-int rechercher_espece (arbre racine, char *espece, liste_t* seq)
-{
-    /* à compléter */
-    return -1;
+int rechercher_espece (arbre racine, char *espece, liste_t *carac){
+	if(racine == NULL){return 1;}
+	if(strcmp(racine->valeur,espece) == 0 || rechercher_espece(racine->gauche,espece,carac) == 0 || rechercher_espece(racine->droit,espece,carac) == 0){
+		if(strcmp(racine->valeur,espece) != 0){
+			cellule_t *cel = nouvelleCellule();
+			cel->valeur = racine->valeur;
+			cel->suivant = carac->tete;
+			carac->tete = cel;
+		}
+		return 0;
+	}
+	return 1;
 }
 
