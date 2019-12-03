@@ -38,6 +38,7 @@ int main(int argc, char *argv[]) {
 
   debug("Ouverture de %s\n", fichier);
   FILE *f = fopen(fichier, "r");
+
   FILE *x = fopen("arbre.dot", "w+");
   if (!f) {
     fprintf(stderr, "Erreur à l'ouverture du fichier `%s'\n", fichier);
@@ -46,6 +47,18 @@ int main(int argc, char *argv[]) {
   }
 
   arbre mon_arbre = lire_arbre(f);
+
+  affiche_arbre(mon_arbre);
+  printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
+  char *espece = "limace";
+  liste_t l;
+  rechercher_espece2(mon_arbre, espece, &l);
+  cellule_t *c = nouvelleCellule();
+  c = l.tete;
+  while (c != NULL) {
+    printf("%s ", c->caract);
+    c = c->suivant;
+  }
   affiche_arbre(mon_arbre, x);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
 

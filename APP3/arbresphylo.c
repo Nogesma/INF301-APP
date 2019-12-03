@@ -1,4 +1,5 @@
 #include "arbresphylo.h"
+#include "listes.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,11 +26,9 @@ void compter_rec(arbre a, int *nb_car, int *nb_esp) {
     (*nb_esp)++;
   } else {
     (*nb_car)++;
-
     if (a->gauche != NULL) {
       compter_rec(a->gauche, nb_car, nb_esp);
     }
-
     if (a->droit != NULL) {
       compter_rec(a->droit, nb_car, nb_esp);
     }
@@ -50,12 +49,57 @@ void compter(arbre a, int *nb_car, int *nb_esp) {
  * mettre les caractéristiques. Retourne 0 si l'espèce a été retrouvée, 1 sinon.
  * Définissez un type de retour approprié !
  */
-int rechercher_espece(arbre racine, char *espece, liste_t *seq) {
-  /* à compléter */
-  return -1;
+int rechercher_espece(arbre racine, char *espece, liste_t *carac) {
+  if (racine == NULL) {
+    return 1;
+  }
+  if (strcmp(racine->valeur, espece) == 0 ||
+      rechercher_espece(racine->gauche, espece, carac) == 0 ||
+      rechercher_espece(racine->droit, espece, carac) == 0) {
+    if (strcmp(racine->valeur, espece) != 0) {
+      cellule_t *cel = nouvelleCellule();
+      cel->caract = racine->valeur;
+      cel->suivant = carac->tete;
+      carac->tete = cel;
+    }
+    return 0;
+  }
+  return 1;
+}
+int recherche(arbre racine, char *espece, cellule_t *c) {
+  cellule_t *cc = nouvelleCellule();
+  if (racine == NULL)
+    return 0;
+  if (strcmp(racine->valeur, espece) == 0) {
+    return 1;
+  }
+  if (recherche(racine->gauche, espece, cc)) {
+    c->suivant = cc;
+    cc->caract = racine->valeur;
+    return 1;
+  }
+  return recherche(racine->droit, espece, c);
 }
 
-void ajout_espèce(arbre *a, char *esp,cellule car){
+int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
+  cellule_t *c = nouvelleCellule();
+  seq->tete = c;
+  if (racine == NULL) {
+    return 1;
+  }
+  if (strcmp(racine->valeur, espece) == 0) {
+    return 0;
+  }
+  if (recherche(racine->droit, espece, c)) {
+    return 0;
+  } else if (recherche(racine->gauche, espece, c)) {
+    c->caract = racine->valeur;
+    return 0;
+  }
+  return 1;
+}
+
+void ajout_espece(arbre *a, char *esp,cellule car){
   if (length(car)!=0){
     if (a==NULL){
       if (car != NULL) {
