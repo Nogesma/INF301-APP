@@ -2,7 +2,7 @@
 #define LISTES_H
 
 #include <stdbool.h>
-#include "arbre.h"
+#include "arbres.h"
 #define eprintf(...) fprintf(stderr, __VA_ARGS__)
 //
 // #define printf(fmt, ...) (0)

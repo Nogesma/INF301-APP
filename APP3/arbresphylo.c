@@ -99,20 +99,20 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   return 1;
 }
 
-void ajout_espece(arbre *a, char *esp,cellule car){
+void ajout_espece(arbre *a, char *esp,cellule_t car){
   if (length(car)!=0){
     if (a==NULL){
       if (car != NULL) {
         a = nouveau_noeud();
-        a.val = car.val;
+        a.valeur = car.val;
         car = car.suiv;
-        ajout_espèce(a.droit, esp, car);
+        ajout_espèce(a->droit, esp, car);
       }
     }
     else{
       if (a.val==car.val){
         car=car.suiv;
-        ajout_espèce(a.droit,esp,car);
+        ajout_espèce(a->droit,esp,car);
       }
       if (estFeuille(a)){
         if (car!=NULL){
@@ -121,7 +121,7 @@ void ajout_espece(arbre *a, char *esp,cellule car){
           noeud b=nouveau_noeud();
           b.valeur=tmp
           a.gauche=b;
-          ajout_espèce(a.droit,esp,car);
+          ajout_espèce(a->droit,esp,car);
         }
         else{
           printf("Ne peut ajouter %s : possède les mêmes caractères que %s",esp,car.valeur);
@@ -129,7 +129,7 @@ void ajout_espece(arbre *a, char *esp,cellule car){
       }
       if (a.val!=car.val){
         car=car.suiv;
-        ajouter(a.gauche,esp,car);
+        ajout_espece(a->gauche,esp,car);
       }
     }
   }

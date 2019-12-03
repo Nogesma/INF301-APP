@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 
   arbre mon_arbre = lire_arbre(f);
 
-  affiche_arbre(mon_arbre);
+  affiche_arbre(mon_arbre,x);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
   char *espece = "limace";
   liste_t l;
@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
     printf("%s ", c->caract);
     c = c->suivant;
   }
-  affiche_arbre(mon_arbre, x);
+  affiche_arbre(mon_arbre,x);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
 
   return 0;
