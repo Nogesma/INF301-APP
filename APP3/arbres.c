@@ -1,10 +1,10 @@
+#include "arbres.h"
 #include <assert.h>
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "arbres.h"
 
 noeud *nouveau_noeud(void) {
   noeud *n = (noeud *)malloc(sizeof(noeud));
@@ -90,5 +90,23 @@ arbre lire_arbre(FILE *f) {
   return racine;
 }
 
-void affiche_arbre(noeud *racine) { /* à remplir */
+void affiche_arbre(noeud *racine, FILE *f) {
+  fprintf(f, "digraph arbre {\n");
+  if (racine != NULL) {
+    affiche_rec(racine, f);
+  }
+  fprintf(f, "}\n");
+}
+
+void affiche_rec(noeud *racine, FILE *f) {
+  if (racine->droit != NULL) {
+    fprintf(f, "%s -> %s [label = \"non\"]\n", racine->valeur,
+            racine->droit->valeur);
+    affiche_rec(racine->droit, f);
+  }
+  if (racine->gauche != NULL) {
+    fprintf(f, "%s -> %s [label = \"oui\"]\n", racine->valeur,
+            racine->gauche->valeur);
+    affiche_rec(racine->gauche, f);
+  }
 }

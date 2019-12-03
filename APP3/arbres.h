@@ -2,7 +2,7 @@
 
 #ifndef ARBRES_H
 #define ARBRES_H
-
+#include <stdio.h>
 /* Structure d'un noeud d'arbre */
 struct noeud_s;
 typedef struct noeud_s noeud;
@@ -30,7 +30,9 @@ noeud *nouveau_noeud(void);
 arbre lire_arbre(FILE *f);
 
 /* Fonction d'affichage, à remplir */
-void affiche_arbre(arbre);
+void affiche_arbre(arbre, FILE *f);
+
+void affiche_rec(arbre, FILE *f);
 
 /* Macros pour de l'affichage uniquement si DEBUG est != 0 */
 extern int DEBUG;

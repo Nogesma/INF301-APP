@@ -1,5 +1,6 @@
 #include "arbresphylo.h"
 #include "listes.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -20,6 +21,7 @@ int hauteur(arbre racine) {
 int estFeuille(arbre a) { return (a->gauche == NULL && a->droit == NULL); }
 
 void compter_rec(arbre a, int *nb_car, int *nb_esp) {
+
   if (estFeuille(a)) {
     (*nb_esp)++;
   } else {
@@ -34,11 +36,11 @@ void compter_rec(arbre a, int *nb_car, int *nb_esp) {
 }
 
 void compter(arbre a, int *nb_car, int *nb_esp) {
-  if (a == NULL) {
-    exit(1);
-  }
   *nb_car = 0;
   *nb_esp = 0;
+  if (a == NULL) {
+    return;
+  }
   compter_rec(a, nb_car, nb_esp);
 }
 
@@ -47,7 +49,6 @@ void compter(arbre a, int *nb_car, int *nb_esp) {
  * mettre les caractéristiques. Retourne 0 si l'espèce a été retrouvée, 1 sinon.
  * Définissez un type de retour approprié !
  */
-
 int rechercher_espece(arbre racine, char *espece, liste_t *carac) {
   if (racine == NULL) {
     return 1;
@@ -97,3 +98,4 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   }
   return 1;
 }
+

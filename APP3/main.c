@@ -38,6 +38,8 @@ int main(int argc, char *argv[]) {
 
   debug("Ouverture de %s\n", fichier);
   FILE *f = fopen(fichier, "r");
+
+  FILE *x = fopen("arbre.dot", "w+");
   if (!f) {
     fprintf(stderr, "Erreur à l'ouverture du fichier `%s'\n", fichier);
     perror(fichier);
@@ -57,5 +59,8 @@ int main(int argc, char *argv[]) {
     printf("%s ", c->caract);
     c = c->suivant;
   }
+  affiche_arbre(mon_arbre, x);
+  printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
+
   return 0;
 }
