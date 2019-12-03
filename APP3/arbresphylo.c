@@ -143,6 +143,37 @@ void ajout_espece(arbre *a, char *esp,cellule car){
   }
 }
 
-void liste_carac(a){
-
+void liste_carac(arbre a) {
+  File *f;
+  liste_t *l;
+  l->tete=NULL
+  enfiler(f, a);
+  int i = 1;
+  int j = 0;
+  while (f != NULL) {
+    arbre n = defiler(f);
+    cellule_t* b=nouvelleCellule();
+    b->caract=n.valeur;
+    if (j == i) {
+      j = 1;
+      i++;
+      afficher(l);
+      while (l!=NULL){
+        detruireCellule(l->tete);
+      }
+      l->tete=b
+    }
+    else{
+      if (present(l,n) && n.gauche!=NIL && n.droit!=NIL){
+        l->suivant=n.valeur;
+        j++;
+      }
+    }
+    if (n.gauche!=Nil){
+      enfiler(f,n.gauche);
+    }
+    if (n.droit!=Nil){
+      enfiler(f,n.droit);
+    }
+  }
 }

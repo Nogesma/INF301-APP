@@ -2,6 +2,7 @@
 #define LISTES_H
 
 #include <stdbool.h>
+#include "arbre.h"
 #define eprintf(...) fprintf(stderr, __VA_ARGS__)
 //
 // #define printf(fmt, ...) (0)
@@ -22,11 +23,8 @@ struct liste {
 };
 
 typedef struct liste liste_t;
-/* Type de liste à compléter selon votre besoin. */
 
 cellule_t *nouvelleCellule();
-
-#endif /* _LISTES_H */
 
 extern bool silent_mode;
 
@@ -35,3 +33,21 @@ void afficher(liste_t *seq);
 cellule_t *nouvelleCellule(void);
 void detruireCellule(cellule_t *cel);
 
+typedef struct Element Element;
+struct Element
+{
+  arbre a;
+  Element *suivant;
+};
+
+typedef struct File File;
+struct File
+{
+  Element *tete;
+};
+
+void enfiler(File *file, int nvNombre);
+arbre defiler(File *file);
+
+int present(liste_t *l, char* car);
+#endif /* _LISTES_H */
