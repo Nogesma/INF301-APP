@@ -50,10 +50,10 @@ int main(int argc, char *argv[]) {
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
   char *espece = "limace";
   liste_t l;
-  printf("%d", rechercher_espece(mon_arbre, espece, &l));
+  rechercher_espece2(mon_arbre, espece, &l);
   cellule_t *c = nouvelleCellule();
   c = l.tete;
-  while (c->suivant != NULL) {
+  while (c != NULL) {
     printf("%s ", c->caract);
     c = c->suivant;
   }

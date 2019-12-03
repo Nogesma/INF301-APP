@@ -67,10 +67,11 @@ int rechercher_espece(arbre racine, char *espece, liste_t *carac) {
 }
 int recherche(arbre racine, char *espece, cellule_t *c) {
   cellule_t *cc = nouvelleCellule();
-  if (racine->valeur == espece)
-    return 1;
-  if (racine == NULL || (racine->droit == NULL && racine->gauche == NULL))
+  if (racine == NULL)
     return 0;
+  if (strcmp(racine->valeur, espece) == 0) {
+    return 1;
+  }
   if (recherche(racine->gauche, espece, cc)) {
     c->suivant = cc;
     cc->caract = racine->valeur;
@@ -85,7 +86,7 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   if (racine == NULL) {
     return 1;
   }
-  if (racine->valeur == espece) {
+  if (strcmp(racine->valeur, espece) == 0) {
     return 0;
   }
   if (recherche(racine->droit, espece, c)) {
