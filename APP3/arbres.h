@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #ifndef ARBRES_H
 #define ARBRES_H
 #include <stdio.h>

@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 noeud *nouveau_noeud(void) {
   noeud *n = (noeud *)malloc(sizeof(noeud));
   assert(n != NULL);
@@ -31,7 +32,6 @@ static char next_char = ' ';
 /* Appelée une fois à la racine (debut du fichier), puis récursivement
  * pour chaque nœud interne rencontré. */
 arbre lire_arbre(FILE *f) {
-
   arbre racine;
 
   GLOB(f); /* lit dans next_char le premier caractère non vide */
