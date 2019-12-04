@@ -26,45 +26,36 @@ cellule_t *nouvelleCellule(void) {
 
 void detruireCellule(cellule_t *cel) { free(cel); }
 
-void enfiler(File *file, char* nvcar)
-{
+void enfiler(File *file, char *nvcar) {
   Element *nouveau = malloc(sizeof(*nouveau));
-  if (file == NULL || nouveau == NULL)
-  {
+  if (file == NULL || nouveau == NULL) {
     exit(EXIT_FAILURE);
   }
 
   nouveau->a = nvcar;
   nouveau->suivant = NULL;
 
-  if (file->tete != NULL) /* La file n'est pas vide */
-  {
+  if (file->tete != NULL) /* La file n'est pas vide */ {
     /* On se positionne à la fin de la file */
     Element *elementActuel = file->tete;
-    while (elementActuel->suivant != NULL)
-    {
+    while (elementActuel->suivant != NULL) {
       elementActuel = elementActuel->suivant;
     }
     elementActuel->suivant = nouveau;
-  }
-  else /* La file est vide, notre élément est le premier */
-  {
+  } else /* La file est vide, notre élément est le premier */ {
     file->tete = nouveau;
   }
 }
 
-arbre defiler(File *file)
-{
-  if (file == NULL)
-  {
+arbre defiler(File *file) {
+  if (file == NULL) {
     exit(EXIT_FAILURE);
   }
 
-  char* nombreDefile;
+  char *nombreDefile;
 
   /* On vérifie s'il y a quelque chose à défiler */
-  if (file->tete != NULL)
-  {
+  if (file->tete != NULL) {
     Element *elementDefile = file->tete;
 
     nombreDefile = elementDefile->a;
@@ -75,8 +66,16 @@ arbre defiler(File *file)
   return nombreDefile;
 }
 
-int present(liste_t *l, char* car){
-  if(l==NULL) return 1;
-  if(l->valeur==car) return 0;
-  return present(liste->suivant,car);
+int present(liste_t *l, char *car) {
+  cellule_t *c = nouvelleCellule();
+  c = l->tete;
+  return presentRec(c, car);
+}
+
+int presentRec(cellule_t *c, char *car) {
+  if (c == NULL)
+    return 1;
+  if (c->caract == car)
+    return 0;
+  return presentRec(c->suivant, car);
 }

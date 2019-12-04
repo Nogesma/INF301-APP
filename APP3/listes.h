@@ -1,8 +1,8 @@
 #ifndef LISTES_H
 #define LISTES_H
 
-#include <stdbool.h>
 #include "arbres.h"
+#include <stdbool.h>
 #define eprintf(...) fprintf(stderr, __VA_ARGS__)
 //
 // #define printf(fmt, ...) (0)
@@ -34,20 +34,18 @@ cellule_t *nouvelleCellule(void);
 void detruireCellule(cellule_t *cel);
 
 typedef struct Element Element;
-struct Element
-{
+struct Element {
   arbre a;
   Element *suivant;
 };
 
 typedef struct File File;
-struct File
-{
+struct File {
   Element *tete;
 };
 
-void enfiler(File *file, int nvNombre);
+void enfiler(File *file, char *nvcar);
 arbre defiler(File *file);
 
-int present(liste_t *l, char* car);
+int present(liste_t *l, char *car);
 #endif /* _LISTES_H */

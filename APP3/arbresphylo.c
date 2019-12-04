@@ -66,6 +66,7 @@ int rechercher_espece(arbre racine, char *espece, liste_t *carac) {
   }
   return 1;
 }
+
 int recherche(arbre racine, char *espece, cellule_t *c) {
   cellule_t *cc = nouvelleCellule();
   if (racine == NULL)
@@ -99,81 +100,75 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   return 1;
 }
 
-void ajout_espece(arbre *a, char *esp,cellule_t car){
-  if (length(car)!=0){
-    if (a==NULL){
+void ajout_espece(arbre a, char *esp, cellule_t *car) {
+  if (car->suivant != NULL) {
+    if (a->valeur == car->caract) {
+      ajout_espece(a->droit, esp, car->suivant);
+    } else {
+      if (a->gauche == NULL) {
+        a->gauche = nouveau_noeud();
+        a->gauche->valeur = car->caract;
+      }
+      ajout_espece(a->gauche, esp, car->suivant);
+    }
+
+    if (estFeuille(a)) {
       if (car != NULL) {
-        a = nouveau_noeud();
-        a.valeur = car.val;
-        car = car.suiv;
-        ajout_espèce(a->droit, esp, car);
+        char *tmp = a->valeur;
+        a->valeur = car->caract;
+        noeud *b = nouveau_noeud();
+        b->valeur = tmp;
+        a->gauche = b;
+        ajout_espece(a->droit, esp, car);
+      } else {
+        printf("Ne peut ajouter %s : possède les mêmes caractères que %s", esp,
+               car->caract);
       }
     }
-    else{
-      if (a.val==car.val){
-        car=car.suiv;
-        ajout_espèce(a->droit,esp,car);
-      }
-      if (estFeuille(a)){
-        if (car!=NULL){
-          char* tmp=a.valeur;
-          a.valeur=car;
-          noeud b=nouveau_noeud();
-          b.valeur=tmp
-          a.gauche=b;
-          ajout_espèce(a->droit,esp,car);
-        }
-        else{
-          printf("Ne peut ajouter %s : possède les mêmes caractères que %s",esp,car.valeur);
-        }
-      }
-      if (a.val!=car.val){
-        car=car.suiv;
-        ajout_espece(a->gauche,esp,car);
-      }
+    if (a->valeur != car->caract) {
+      car = car->suivant;
+      ajout_espece(a->gauche, esp, car);
     }
-  }
-  else{
-    if (a==NULL){
-      a=nouveau_noeud();
-      a.val=esp;
-    }
-    else
-      printf("Ne peut ajouter %s : possède les mêmes caractères que %s",esp,car.valeur);
+  } else {
+    if (a == NULL) {
+      a = nouveau_noeud();
+      a->valeur = esp;
+    } else
+      printf("Ne peut ajouter %s : possède les mêmes caractères que %s", esp,
+             car->caract);
   }
 }
 
-void liste_carac(arbre a) {
-  File *f;
-  liste_t *l;
-  l->tete=NULL
-  enfiler(f, a);
-  int i = 1;
-  int j = 0;
-  while (f != NULL) {
-    arbre n = defiler(f);
-    cellule_t* b=nouvelleCellule();
-    b->caract=n.valeur;
-    if (j == i) {
-      j = 1;
-      i++;
-      afficher(l);
-      while (l!=NULL){
-        detruireCellule(l->tete);
-      }
-      l->tete=b
-    }
-    else{
-      if (present(l,n) && n.gauche!=NIL && n.droit!=NIL){
-        l->suivant=n.valeur;
-        j++;
-      }
-    }
-    if (n.gauche!=Nil){
-      enfiler(f,n.gauche);
-    }
-    if (n.droit!=Nil){
-      enfiler(f,n.droit);
-    }
-  }
-}
+// void liste_carac(arbre a) {
+//  File *f;
+//  liste_t *l;
+//  l->tete = NULL;
+//  enfiler(f, a);
+//  int i = 1;
+//  int j = 0;
+//  while (f != NULL) {
+//    arbre n = defiler(f);
+//    cellule_t *b = nouvelleCellule();
+//    b->caract = n->valeur;
+//    if (j == i) {
+//      j = 1;
+//      i++;
+//      afficher(l);
+//      while (l != NULL) {
+//        detruireCellule(l->tete);
+//      }
+//      l->tete = b;
+//    } else {
+//      if (present(l, n) && n->gauche != NULL && n->droit != NULL) {
+//        l->suivant = n->valeur;
+//        j++;
+//      }
+//    }
+//    if (n.gauche != Nil) {
+//      enfiler(f, n.gauche);
+//    }
+//    if (n.droit != Nil) {
+//      enfiler(f, n.droit);
+//    }
+//  }
+//}
