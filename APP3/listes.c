@@ -52,7 +52,7 @@ arbre defiler(File *file) {
     exit(EXIT_FAILURE);
   }
 
-  char *nombreDefile;
+  char *nombreDefile=NULL;
 
   /* On vérifie s'il y a quelque chose à défiler */
   if (file->tete != NULL) {

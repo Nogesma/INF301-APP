@@ -48,4 +48,5 @@ void enfiler(File *file, char *nvcar);
 arbre defiler(File *file);
 
 int present(liste_t *l, char *car);
+int presentRec(cellule_t *c, char *car);
 #endif /* _LISTES_H */
