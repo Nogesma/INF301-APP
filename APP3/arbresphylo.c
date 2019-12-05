@@ -110,7 +110,7 @@ void ajout_espece(arbre *a, char *esp,cellule_t *car){
         car = car->suivant;
         ajout_espece(&(*a)->droit, esp, car);
       }
-      ajout_espece(a->gauche, esp, car->suivant);
+      ajout_espece(&(*a)->gauche, esp, car->suivant);
     }
     else{
       if ((*a)->valeur == car->caract){
