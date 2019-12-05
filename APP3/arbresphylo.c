@@ -148,12 +148,12 @@ void ajout_espece(arbre *a, char *esp, cellule_t *car) {
 }
 
 void liste_carac(arbre a) {
-  File *f;
+  File *f = NULL;
   f->tete = NULL;
-  liste_t *l;
+  liste_t *l = NULL;
   cellule_t *c = nouvelleCellule();
   l->tete = c;
-  enfiler(f, a);
+  enfiler(f, &a);
   int i = 1;
   int j = 0;
   while (f != NULL) {
@@ -176,10 +176,10 @@ void liste_carac(arbre a) {
       }
     }
     if (n->gauche != NULL) {
-      enfiler(f, n->gauche);
+      enfiler(f, &n->gauche);
     }
     if (n->droit != NULL) {
-      enfiler(f, n->droit);
+      enfiler(f, &n->droit);
     }
   }
   remove("temp.txt");
