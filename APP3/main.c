@@ -49,10 +49,10 @@ int main(int argc, char *argv[]) {
   arbre mon_arbre = lire_arbre(f);
 
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
-  char *espece = "limace";
+  char *espece = "autruche";
   liste_t l;
   l.tete = NULL;
-  rechercher_espece(mon_arbre, espece, &l);
+  rechercher_espece2(mon_arbre, espece, &l);
   afficher(&l);
 
   char *abc = "abc";
