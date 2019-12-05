@@ -99,12 +99,12 @@ void affiche_arbre(noeud *racine, FILE *f) {
 
 void affiche_rec(noeud *racine, FILE *f) {
   if (racine->droit != NULL) {
-    fprintf(f, "%s -> %s [label = \"non\"]\n", racine->valeur,
+    fprintf(f, "%s -> %s [label = \"oui\"]\n", racine->valeur,
             racine->droit->valeur);
     affiche_rec(racine->droit, f);
   }
   if (racine->gauche != NULL) {
-    fprintf(f, "%s -> %s [label = \"oui\"]\n", racine->valeur,
+    fprintf(f, "%s -> %s [label = \"non\"]\n", racine->valeur,
             racine->gauche->valeur);
     affiche_rec(racine->gauche, f);
   }

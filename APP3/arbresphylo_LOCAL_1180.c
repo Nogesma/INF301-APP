@@ -74,12 +74,12 @@ int recherche(arbre racine, char *espece, cellule_t *c) {
   if (strcmp(racine->valeur, espece) == 0) {
     return 1;
   }
-  if (recherche(racine->droit, espece, cc)) {
+  if (recherche(racine->gauche, espece, cc)) {
     c->suivant = cc;
     cc->caract = racine->valeur;
     return 1;
   }
-  return recherche(racine->gauche, espece, c);
+  return recherche(racine->droit, espece, c);
 }
 
 int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
@@ -91,9 +91,9 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   if (strcmp(racine->valeur, espece) == 0) {
     return 0;
   }
-  if (recherche(racine->gauche, espece, c)) {
+  if (recherche(racine->droit, espece, c)) {
     return 0;
-  } else if (recherche(racine->droit, espece, c)) {
+  } else if (recherche(racine->gauche, espece, c)) {
     c->caract = racine->valeur;
     return 0;
   }
@@ -141,40 +141,36 @@ void ajout_espece(arbre *a, char *esp,cellule_t *car){
 	}
 }
 
-void liste_carac(arbre a) {
-  File f;
-  f.tete = NULL;
-  liste_t l;
-  cellule_t *c = nouvelleCellule();
-  l.tete = c;
-  enfiler(&f, &a);
-  int i = 1;
-  int j = 0;
-  while (&f != NULL) {
-    arbre n = defiler(&f);
-    cellule_t *b = nouvelleCellule();
-    b->caract = n->valeur;
-    if (j == i) {
-      j = 1;
-      i++;
-      afficher(&l);
-      while (&l != NULL) {
-        detruireCellule(l.tete);
-      }
-      l.tete = b;
-    } else {
-      if (present(&l, n->valeur) && n->gauche != NULL && n->droit != NULL) {
-        c->suivant = b;
-        c = c->suivant;
-        j++;
-      }
-    }
-    if (n->gauche != NULL) {lmjhuvghbn 
-      enfiler(&f, &n->gauche);
-    }
-    if (n->droit != NULL) {
-      enfiler(&f, &n->droit);
-    }
-  }
-  remove("temp.txt");
-}
+// void liste_carac(arbre a) {
+//  File *f;
+//  liste_t *l;
+//  l->tete = NULL;
+//  enfiler(f, a);
+//  int i = 1;
+//  int j = 0;
+//  while (f != NULL) {
+//    arbre n = defiler(f);
+//    cellule_t *b = nouvelleCellule();
+//    b->caract = n->valeur;
+//    if (j == i) {
+//      j = 1;
+//      i++;
+//      afficher(l);
+//      while (l != NULL) {
+//        detruireCellule(l->tete);
+//      }
+//      l->tete = b;
+//    } else {
+//      if (present(l, n) && n->gauche != NULL && n->droit != NULL) {
+//        l->suivant = n->valeur;
+//        j++;
+//      }
+//    }
+//    if (n.gauche != Nil) {
+//      enfiler(f, n.gauche);
+//    }
+//    if (n.droit != Nil) {
+//      enfiler(f, n.droit);
+//    }
+//  }
+//}
