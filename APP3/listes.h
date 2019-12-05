@@ -46,7 +46,7 @@ struct File {
   Element *tete;
 };
 
-void enfiler(File *file, char *nvcar);
+void enfiler(File *file, arbre *a);
 arbre defiler(File *file);
 
 int present(liste_t *l, char *car);
