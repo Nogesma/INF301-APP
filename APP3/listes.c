@@ -9,7 +9,7 @@
 #endif
 
 void afficher(liste_t *seq) {
-  cellule_t *cel = seq->tete;
+	cellule_t *cel = seq->tete;
   printf("Les caracteristiques: ");
   while (cel != NULL) {
     printf("%s ", cel->caract);
@@ -21,10 +21,20 @@ void afficher(liste_t *seq) {
 cellule_t *nouvelleCellule(void) {
   cellule_t *c;
   c = (cellule_t *)malloc(sizeof(cellule_t));
+	c->suivant = NULL;
   return c;
 }
 
 void detruireCellule(cellule_t *cel) { free(cel); }
+
+int length(cellule_t *cel){
+	int counter = 0;
+	while(cel != NULL){
+		counter++;
+		cel = cel->suivant;
+	}
+	return counter;
+}
 
 void enfiler(File *file, char *nvcar) {
   Element *nouveau = malloc(sizeof(*nouveau));
@@ -79,3 +89,4 @@ int presentRec(cellule_t *c, char *car) {
     return 0;
   return presentRec(c->suivant, car);
 }
+

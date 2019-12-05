@@ -33,6 +33,8 @@ void afficher(liste_t *seq);
 cellule_t *nouvelleCellule(void);
 void detruireCellule(cellule_t *cel);
 
+int length(cellule_t *cel);
+
 typedef struct Element Element;
 struct Element {
   arbre a;

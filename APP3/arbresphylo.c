@@ -100,42 +100,53 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   return 1;
 }
 
-void ajout_espece(arbre a, char *esp, cellule_t *car) {
-  if (car->suivant != NULL) {
-    if (a->valeur == car->caract) {
-      ajout_espece(a->droit, esp, car->suivant);
-    } else {
-      if (a->gauche == NULL) {
-        a->gauche = nouveau_noeud();
-        a->gauche->valeur = car->caract;
+void ajout_espece(arbre *a, char *esp,cellule_t *car){
+  if (length(car)!=0){
+  	printf("1\n");
+    if (a==NULL){
+      if (car != NULL) {
+        *a = nouveau_noeud();
+        (*a)->valeur = car->caract;
+        car = car->suivant;
+        ajout_espece(&(*a)->droit, esp, car);
       }
       ajout_espece(a->gauche, esp, car->suivant);
     }
-
-    if (estFeuille(a)) {
-      if (car != NULL) {
-        char *tmp = a->valeur;
-        a->valeur = car->caract;
-        noeud *b = nouveau_noeud();
-        b->valeur = tmp;
-        a->gauche = b;
-        ajout_espece(a->droit, esp, car);
-      } else {
-        printf("Ne peut ajouter %s : possède les mêmes caractères que %s", esp,
-               car->caract);
+    else{
+      if ((*a)->valeur == car->caract){
+        car=car->suivant;
+        ajout_espece(&(*a)->droit, esp, car);
+      }
+      if (estFeuille(*a)){
+        if (car!=NULL){
+          char* tmp= (*a)->valeur;
+          (*a)->valeur = car->caract;
+          noeud *b = nouveau_noeud();
+          b->valeur = tmp;
+          (*a)->gauche = b;
+          ajout_espece(&(*a)->droit, esp, car);
+        }
+        else{
+          printf("Ne peut ajouter %s : possède les mêmes caractères que %s",esp,car->caract);
+        }
+      }
+      if ((*a)->valeur != car->caract){
+        car=car->suivant;
+        ajout_espece(&(*a)->gauche, esp, car);
       }
     }
-    if (a->valeur != car->caract) {
-      car = car->suivant;
-      ajout_espece(a->gauche, esp, car);
+  }
+  else{
+		printf("2\n");
+    if (a ==NULL){
+			printf("3\n");
+      *a = nouveau_noeud();
+      (*a)->valeur = esp;
     }
-  } else {
-    if (a == NULL) {
-      a = nouveau_noeud();
-      a->valeur = esp;
-    } else
-      printf("Ne peut ajouter %s : possède les mêmes caractères que %s", esp,
-             car->caract);
+    else
+			printf("4\n");
+      printf("Ne peut ajouter %s\n",esp);
+			printf("5\n");
   }
 }
 
