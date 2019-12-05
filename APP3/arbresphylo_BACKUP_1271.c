@@ -100,6 +100,7 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   return 1;
 }
 
+<<<<<<< HEAD
 void ajout_espece(arbre *a, char *esp,cellule_t *car){
 	printf("CALLED,current is %s and %s\n",car->caract,(*a)->valeur);
   if (length(car)!=0){
@@ -174,3 +175,89 @@ void ajout_espece(arbre *a, char *esp,cellule_t *car){
 //    }
 //  }
 //}
+=======
+void ajout_espece(arbre *a, char *esp, cellule_t *car) {
+  if (length(car) != 0) {
+    printf("1\n");
+    if (a == NULL) {
+      if (car != NULL) {
+        *a = nouveau_noeud();
+        (*a)->valeur = car->caract;
+        car = car->suivant;
+        ajout_espece(&(*a)->droit, esp, car);
+      }
+      ajout_espece(&(*a)->gauche, esp, car->suivant);
+    } else {
+      if ((*a)->valeur == car->caract) {
+        car = car->suivant;
+        ajout_espece(&(*a)->droit, esp, car);
+      }
+      if (estFeuille(*a)) {
+        if (car != NULL) {
+          char *tmp = (*a)->valeur;
+          (*a)->valeur = car->caract;
+          noeud *b = nouveau_noeud();
+          b->valeur = tmp;
+          (*a)->gauche = b;
+          ajout_espece(&(*a)->droit, esp, car);
+        } else {
+          printf("Ne peut ajouter %s : possède les mêmes caractères que %s",
+                 esp, car->caract);
+        }
+      }
+      if ((*a)->valeur != car->caract) {
+        car = car->suivant;
+        ajout_espece(&(*a)->gauche, esp, car);
+      }
+    }
+  } else {
+    printf("2\n");
+    if (a == NULL) {
+      printf("3\n");
+      *a = nouveau_noeud();
+      (*a)->valeur = esp;
+    } else
+      printf("4\n");
+    printf("Ne peut ajouter %s\n", esp);
+    printf("5\n");
+  }
+}
+
+void liste_carac(arbre a) {
+  File *f = NULL;
+  f->tete = NULL;
+  liste_t *l = NULL;
+  cellule_t *c = nouvelleCellule();
+  l->tete = c;
+  enfiler(f, &a);
+  int i = 1;
+  int j = 0;
+  while (f != NULL) {
+    arbre n = defiler(f);
+    cellule_t *b = nouvelleCellule();
+    b->caract = n->valeur;
+    if (j == i) {
+      j = 1;
+      i++;
+      afficher(l);
+      while (l != NULL) {
+        detruireCellule(l->tete);
+      }
+      l->tete = b;
+    } else {
+      if (present(l, n->valeur) && n->gauche != NULL && n->droit != NULL) {
+        c->suivant = b;
+        c = c->suivant;
+        j++;
+      }
+    }
+    if (n->gauche != NULL) {
+      enfiler(f, &n->gauche);
+    }
+    if (n->droit != NULL) {
+      enfiler(f, &n->droit);
+    }
+  }
+  remove("temp.txt");
+}
+>>>>>>> fa5fd5d947f860ba40b758b16f0953213657a04f

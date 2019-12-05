@@ -9,7 +9,7 @@
 #endif
 
 void afficher(liste_t *seq) {
-	cellule_t *cel = seq->tete;
+  cellule_t *cel = seq->tete;
   printf("Les caracteristiques: ");
   while (cel != NULL) {
     printf("%s ", cel->caract);
@@ -21,28 +21,28 @@ void afficher(liste_t *seq) {
 cellule_t *nouvelleCellule(void) {
   cellule_t *c;
   c = (cellule_t *)malloc(sizeof(cellule_t));
-	c->suivant = NULL;
+  c->suivant = NULL;
   return c;
 }
 
 void detruireCellule(cellule_t *cel) { free(cel); }
 
-int length(cellule_t *cel){
-	int counter = 0;
-	while(cel != NULL){
-		counter++;
-		cel = cel->suivant;
-	}
-	return counter;
+int length(cellule_t *cel) {
+  int counter = 0;
+  while (cel != NULL) {
+    counter++;
+    cel = cel->suivant;
+  }
+  return counter;
 }
 
-void enfiler(File *file, char *nvcar) {
+void enfiler(File *file, arbre *a) {
   Element *nouveau = malloc(sizeof(*nouveau));
   if (file == NULL || nouveau == NULL) {
     exit(EXIT_FAILURE);
   }
 
-  nouveau->a = nvcar;
+  nouveau->a = *a;
   nouveau->suivant = NULL;
 
   if (file->tete != NULL) /* La file n'est pas vide */ {
@@ -62,18 +62,17 @@ arbre defiler(File *file) {
     exit(EXIT_FAILURE);
   }
 
-  char *nombreDefile=NULL;
-
+  arbre *nombreDefile = NULL;
   /* On vérifie s'il y a quelque chose à défiler */
   if (file->tete != NULL) {
     Element *elementDefile = file->tete;
 
-    nombreDefile = elementDefile->a;
+    nombreDefile = &elementDefile->a;
     file->tete = elementDefile->suivant;
     free(elementDefile);
   }
 
-  return nombreDefile;
+  return *nombreDefile;
 }
 
 int present(liste_t *l, char *car) {
@@ -89,4 +88,3 @@ int presentRec(cellule_t *c, char *car) {
     return 0;
   return presentRec(c->suivant, car);
 }
-

@@ -23,7 +23,7 @@ int rechercher_espece(arbre racine, char *espece, liste_t *seq);
 int rechercher_esp(arbre racine, char *espece, liste_t *seq);
 int rechercher_espece2(arbre racine, char *espece, liste_t *seq);
 
-void ajout_espece(arbre *a, char *esp,cellule_t *car);
+void ajout_espece(arbre *a, char *esp, cellule_t *car);
 void liste_carac(arbre a);
 
 #endif

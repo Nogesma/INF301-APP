@@ -74,12 +74,12 @@ int recherche(arbre racine, char *espece, cellule_t *c) {
   if (strcmp(racine->valeur, espece) == 0) {
     return 1;
   }
-  if (recherche(racine->droit, espece, cc)) {
+  if (recherche(racine->gauche, espece, cc)) {
     c->suivant = cc;
     cc->caract = racine->valeur;
     return 1;
   }
-  return recherche(racine->gauche, espece, c);
+  return recherche(racine->droit, espece, c);
 }
 
 int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
@@ -91,9 +91,9 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   if (strcmp(racine->valeur, espece) == 0) {
     return 0;
   }
-  if (recherche(racine->gauche, espece, c)) {
+  if (recherche(racine->droit, espece, c)) {
     return 0;
-  } else if (recherche(racine->droit, espece, c)) {
+  } else if (recherche(racine->gauche, espece, c)) {
     c->caract = racine->valeur;
     return 0;
   }
@@ -101,44 +101,53 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
 }
 
 void ajout_espece(arbre *a, char *esp,cellule_t *car){
-	printf("CALLED,current is %s and %s\n",car->caract,(*a)->valeur);
   if (length(car)!=0){
-		printf("1\n");
-		if ((*a) == NULL){
-			printf("5\n");
-			(*a) = nouveau_noeud();
-			strcpy((*a)->valeur,car->caract);
-			car = car->suivant;
-			ajout_espece(&(*a)->droit,esp,car);
-		}
-		else if(strcmp((*a)->valeur,car->caract) == 0){
-			printf("3\n");
-			car = car->suivant;
-			ajout_espece(&(*a)->droit,esp,car);
-		}
-		else if(estFeuille(*a)){
-			printf("4\n");
-			char *tmp = (*a)->valeur;
-			(*a) = NULL;
-			ajout_espece(&(*a)->droit,esp,car);
-			arbre b = nouveau_noeud();
-			strcpy(b->valeur,tmp);
-			(*a)->gauche = b; 
-		}
-		else{
-			ajout_espece(&(*a)->gauche,esp,car);
-		}
-	}
-	else{
+  	printf("1\n");
+    if (a==NULL){
+      if (car != NULL) {
+        *a = nouveau_noeud();
+        (*a)->valeur = car->caract;
+        car = car->suivant;
+        ajout_espece(&(*a)->droit, esp, car);
+      }
+      ajout_espece(a->gauche, esp, car->suivant);
+    }
+    else{
+      if ((*a)->valeur == car->caract){
+        car=car->suivant;
+        ajout_espece(&(*a)->droit, esp, car);
+      }
+      if (estFeuille(*a)){
+        if (car!=NULL){
+          char* tmp= (*a)->valeur;
+          (*a)->valeur = car->caract;
+          noeud *b = nouveau_noeud();
+          b->valeur = tmp;
+          (*a)->gauche = b;
+          ajout_espece(&(*a)->droit, esp, car);
+        }
+        else{
+          printf("Ne peut ajouter %s : possède les mêmes caractères que %s",esp,car->caract);
+        }
+      }
+      if ((*a)->valeur != car->caract){
+        car=car->suivant;
+        ajout_espece(&(*a)->gauche, esp, car);
+      }
+    }
+  }
+  else{
 		printf("2\n");
-		if ((*a) == NULL){
-			(*a) = nouveau_noeud();
-			strcpy((*a)->valeur,esp);
-		}
-		else{
-			printf("ERROR\n");
-		} 
-	}
+    if (a ==NULL){
+			printf("3\n");
+      *a = nouveau_noeud();
+      (*a)->valeur = esp;
+    }
+    else
+			printf("4\n");
+      printf("Ne peut ajouter %s\n",esp);
+			printf("5\n");
+  }
 }
 
 // void liste_carac(arbre a) {
