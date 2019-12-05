@@ -150,7 +150,7 @@ void liste_carac(arbre a) {
   enfiler(&f, &a);
   int i = 1;
   int j = 0;
-  while (&f != NULL) {
+  while (f.tete != NULL) {
     arbre n = defiler(&f);
     cellule_t *b = nouvelleCellule();
     b->caract = n->valeur;
@@ -158,7 +158,7 @@ void liste_carac(arbre a) {
       j = 1;
       i++;
       afficher(&l);
-      while (&l != NULL) {
+      while (l.tete != NULL) {
         detruireCellule(l.tete);
       }
       l.tete = b;
@@ -169,7 +169,7 @@ void liste_carac(arbre a) {
         j++;
       }
     }
-    if (n->gauche != NULL) {lmjhuvghbn 
+    if (n->gauche != NULL) {
       enfiler(&f, &n->gauche);
     }
     if (n->droit != NULL) {
