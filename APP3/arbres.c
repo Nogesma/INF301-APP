@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 noeud *nouveau_noeud(void) {
   noeud *n = (noeud *)malloc(sizeof(noeud));
   assert(n != NULL);

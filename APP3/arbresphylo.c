@@ -66,6 +66,7 @@ int rechercher_espece(arbre racine, char *espece, liste_t *carac) {
   }
   return 1;
 }
+
 int recherche(arbre racine, char *espece, cellule_t *c) {
   cellule_t *cc = nouvelleCellule();
   if (racine == NULL)
@@ -109,6 +110,7 @@ void ajout_espece(arbre *a, char *esp,cellule_t *car){
         car = car->suivant;
         ajout_espece(&(*a)->droit, esp, car);
       }
+      ajout_espece(a->gauche, esp, car->suivant);
     }
     else{
       if ((*a)->valeur == car->caract){
@@ -148,6 +150,36 @@ void ajout_espece(arbre *a, char *esp,cellule_t *car){
   }
 }
 
-void liste_carac(a){
-
-}
+// void liste_carac(arbre a) {
+//  File *f;
+//  liste_t *l;
+//  l->tete = NULL;
+//  enfiler(f, a);
+//  int i = 1;
+//  int j = 0;
+//  while (f != NULL) {
+//    arbre n = defiler(f);
+//    cellule_t *b = nouvelleCellule();
+//    b->caract = n->valeur;
+//    if (j == i) {
+//      j = 1;
+//      i++;
+//      afficher(l);
+//      while (l != NULL) {
+//        detruireCellule(l->tete);
+//      }
+//      l->tete = b;
+//    } else {
+//      if (present(l, n) && n->gauche != NULL && n->droit != NULL) {
+//        l->suivant = n->valeur;
+//        j++;
+//      }
+//    }
+//    if (n.gauche != Nil) {
+//      enfiler(f, n.gauche);
+//    }
+//    if (n.droit != Nil) {
+//      enfiler(f, n.droit);
+//    }
+//  }
+//}

@@ -1,7 +1,7 @@
 .idea/
 .DS_Store
 cmake-build-debug/
-**/**.o
+*.o
 main
 **/**.dot
 **/**.png
