@@ -148,38 +148,38 @@ void ajout_espece(arbre *a, char *esp, cellule_t *car) {
 }
 
 void liste_carac(arbre a) {
-  File *f = NULL;
-  f->tete = NULL;
-  liste_t *l = NULL;
+  File f;
+  f.tete = NULL;
+  liste_t l;
   cellule_t *c = nouvelleCellule();
-  l->tete = c;
-  enfiler(f, &a);
+  l.tete = c;
+  enfiler(&f, &a);
   int i = 1;
   int j = 0;
-  while (f != NULL) {
-    arbre n = defiler(f);
+  while (&f != NULL) {
+    arbre n = defiler(&f);
     cellule_t *b = nouvelleCellule();
     b->caract = n->valeur;
     if (j == i) {
       j = 1;
       i++;
-      afficher(l);
-      while (l != NULL) {
-        detruireCellule(l->tete);
+      afficher(&l);
+      while (&l != NULL) {
+        detruireCellule(l.tete);
       }
-      l->tete = b;
+      l.tete = b;
     } else {
-      if (present(l, n->valeur) && n->gauche != NULL && n->droit != NULL) {
+      if (present(&l, n->valeur) && n->gauche != NULL && n->droit != NULL) {
         c->suivant = b;
         c = c->suivant;
         j++;
       }
     }
-    if (n->gauche != NULL) {
-      enfiler(f, &n->gauche);
+    if (n->gauche != NULL) {lmjhuvghbn 
+      enfiler(&f, &n->gauche);
     }
     if (n->droit != NULL) {
-      enfiler(f, &n->droit);
+      enfiler(&f, &n->droit);
     }
   }
   remove("temp.txt");

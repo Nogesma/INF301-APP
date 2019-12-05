@@ -58,6 +58,8 @@ int main(int argc, char *argv[]) {
   char *abc = "abc";
   //  ajout_espece(&mon_arbre, abc, l.tete);
 
+  liste_carac(mon_arbre);
+
   affiche_arbre(mon_arbre, x);
   fclose(x);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));

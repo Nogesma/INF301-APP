@@ -1,5 +1,0 @@
-digraph arbre {
-vertebres -> doigts [label = "oui"]
-doigts -> plumes [label = "oui"]
-plumes -> limace [label = "oui"]
-}
