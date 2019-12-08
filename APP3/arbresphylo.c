@@ -151,9 +151,9 @@ void liste_carac(arbre a) {
   int i = 1;
   int j = 0;
   while (f.tete != NULL) {
-    arbre n = defiler(&f);
-    cellule_t *b = nouvelleCellule();
-    b->caract = n->valeur;
+    noeud n = defiler(&f);
+    cellule_a *b = nouvelleCellule_a();
+    b->n = &n;
     if (j == i) {
       j = 1;
       i++;
@@ -163,17 +163,17 @@ void liste_carac(arbre a) {
       }
       l.tete = b;
     } else {
-      if (present(&l, n->valeur) && n->gauche != NULL && n->droit != NULL) {
+      if (present(&l, n.valeur) && n.gauche != NULL && n.droit != NULL) {
         c->suivant = b;
         c = c->suivant;
         j++;
       }
     }
-    if (n->gauche != NULL) {
-      enfiler(&f, &n->gauche);
+    if (n.gauche != NULL) {
+      enfiler(&f, &n.gauche);
     }
-    if (n->droit != NULL) {
-      enfiler(&f, &n->droit);
+    if (n.droit != NULL) {
+      enfiler(&f, &n.droit);
     }
   }
   remove("temp.txt");
