@@ -56,11 +56,39 @@ int main(int argc, char *argv[]) {
   afficher(&l);
 
   char *abc = "abc";
-  //  ajout_espece(&mon_arbre, abc, l.tete);
+ 
+  //liste_carac(mon_arbre);
+	
+	
+	//TESTER
+	cellule_t *one = nouvelleCellule();
+  cellule_t *two = nouvelleCellule();
+ 	cellule_t *three = nouvelleCellule();
+ 	cellule_t *four = nouvelleCellule();
+	cellule_t *five = nouvelleCellule();
+  cellule_t *six = nouvelleCellule();
+ 	cellule_t *seven = nouvelleCellule();
+  cellule_t *eight = nouvelleCellule();
+  cellule_t *nine = nouvelleCellule();
 
-  liste_carac(mon_arbre);
+        one->caract = "vertebres";
+        one->suivant = two;
+        two->caract = "machoires";
+        two->suivant = three;
+        three->caract = "doigts";
+        three->suivant = four;
+        four->caract = "amnios";
+        four->suivant = five;
+        five->caract = "placenta";
+        five->suivant = six;
+        six->caract = "cornes";
+        six->suivant = seven;
+        seven->caract = "mdr";
+        seven->suivant = NULL;
 
-  affiche_arbre(mon_arbre, x);
+	ajout_espece(&mon_arbre, abc, one);
+	affiche_arbre(mon_arbre, x);
+  //affiche_arbre(mon_arbre, x);
   fclose(x);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
 

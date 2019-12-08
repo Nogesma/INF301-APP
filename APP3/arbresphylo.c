@@ -101,44 +101,38 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
 }
 
 void ajout_espece(arbre *a, char *esp,cellule_t *car){
-	printf("CALLED,current is %s and %s\n",car->caract,(*a)->valeur);
   if (length(car)!=0){
-		printf("1\n");
-		if ((*a) == NULL){
-			printf("5\n");
-			(*a) = nouveau_noeud();
-			strcpy((*a)->valeur,car->caract);
-			car = car->suivant;
-			ajout_espece(&(*a)->droit,esp,car);
-		}
-		else if(strcmp((*a)->valeur,car->caract) == 0){
-			printf("3\n");
-			car = car->suivant;
-			ajout_espece(&(*a)->droit,esp,car);
-		}
-		else if(estFeuille(*a)){
-			printf("4\n");
-			char *tmp = (*a)->valeur;
-			(*a) = NULL;
-			ajout_espece(&(*a)->droit,esp,car);
-			arbre b = nouveau_noeud();
-			strcpy(b->valeur,tmp);
-			(*a)->gauche = b; 
-		}
-		else{
-			ajout_espece(&(*a)->gauche,esp,car);
-		}
-	}
-	else{
-		printf("2\n");
-		if ((*a) == NULL){
-			(*a) = nouveau_noeud();
-			strcpy((*a)->valeur,esp);
-		}
-		else{
-			printf("ERROR\n");
-		} 
-	}
+                if ((*a) == NULL){
+                        (*a) = nouveau_noeud();
+                        (*a)->valeur = car->caract;
+                        car = car->suivant;
+                        ajout_espece(&(*a)->droit,esp,car);
+                }
+                else if(strcmp((*a)->valeur,car->caract) == 0){
+                        car = car->suivant;
+                        ajout_espece(&(*a)->droit,esp,car);
+                }
+                else if(estFeuille(*a)){
+                        char *tmp = (*a)->valeur;
+                        (*a) = NULL;
+                        ajout_espece(a,esp,car);
+                        arbre b = nouveau_noeud();
+                        b->valeur = tmp;
+                        (*a)->gauche = b;
+                }
+                else{
+                        ajout_espece(&(*a)->gauche,esp,car);
+                }
+        }
+        else{
+                if ((*a) == NULL){
+                        (*a) = nouveau_noeud();
+                        (*a)->valeur = esp;
+                }
+                else{
+                        printf("ERROR:ne peut pas aajouter\n");
+                }
+        }
 }
 
 void liste_carac(arbre a) {
