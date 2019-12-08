@@ -170,5 +170,5 @@ void liste_carac(arbre a) {
       enfiler(&f, &n.droit);
     }
   }
-  remove("temp.txt");
+//  remove("temp.txt");
 }

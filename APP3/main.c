@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 
   char *abc = "abc";
  
-  //liste_carac(mon_arbre);
+  liste_carac(mon_arbre);
 	
 	
 	//TESTER
