@@ -49,24 +49,6 @@ void compter(arbre a, int *nb_car, int *nb_esp) {
  * mettre les caractéristiques. Retourne 0 si l'espèce a été retrouvée, 1 sinon.
  * Définissez un type de retour approprié !
  */
-int rechercher_espece(arbre racine, char *espece, liste_t *carac) {
-  if (racine == NULL) {
-    return 1;
-  }
-  if (strcmp(racine->valeur, espece) == 0 ||
-      rechercher_espece(racine->gauche, espece, carac) == 0 ||
-      rechercher_espece(racine->droit, espece, carac) == 0) {
-    if (strcmp(racine->valeur, espece) != 0) {
-      cellule_t *cel = nouvelleCellule();
-      cel->caract = racine->valeur;
-      cel->suivant = carac->tete;
-      carac->tete = cel;
-    }
-    return 0;
-  }
-  return 1;
-}
-
 int recherche(arbre racine, char *espece, cellule_t *c) {
   cellule_t *cc = nouvelleCellule();
   if (racine == NULL)
@@ -82,7 +64,7 @@ int recherche(arbre racine, char *espece, cellule_t *c) {
   return recherche(racine->gauche, espece, c);
 }
 
-int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
+int rechercher_espece(arbre racine, char *espece, liste_t *seq) {
   cellule_t *c = nouvelleCellule();
   seq->tete = c;
   if (racine == NULL) {
@@ -100,85 +82,73 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   return 1;
 }
 
-void ajout_espece(arbre *a, char *esp,cellule_t *car){
-  if (length(car)!=0){
-                if ((*a) == NULL){
-                        (*a) = nouveau_noeud();
-                        (*a)->valeur = car->caract;
-                        car = car->suivant;
-                        ajout_espece(&(*a)->droit,esp,car);
-                }
-                else if(strcmp((*a)->valeur,car->caract) == 0){
-                        car = car->suivant;
-                        ajout_espece(&(*a)->droit,esp,car);
-                }
-                else if(estFeuille(*a)){
-                        char *tmp = (*a)->valeur;
-                        (*a) = NULL;
-                        ajout_espece(a,esp,car);
-                        arbre b = nouveau_noeud();
-                        b->valeur = tmp;
-                        (*a)->gauche = b;
-                }
-                else{
-                        ajout_espece(&(*a)->gauche,esp,car);
-                }
-        }
-        else{
-                if ((*a) == NULL){
-                        (*a) = nouveau_noeud();
-                        (*a)->valeur = esp;
-                }
-                else{
-                        printf("ERROR:ne peut pas ajouter\n");
-                }
-        }
+void ajout_espece(arbre *a, char *esp, cellule_t *car) {
+  if (length(car) != 0) {
+    if ((*a) == NULL) {
+      (*a) = nouveau_noeud();
+      (*a)->valeur = car->caract;
+      car = car->suivant;
+      ajout_espece(&(*a)->droit, esp, car);
+    } else if (strcmp((*a)->valeur, car->caract) == 0) {
+      car = car->suivant;
+      ajout_espece(&(*a)->droit, esp, car);
+    } else if (estFeuille(*a)) {
+      char *tmp = (*a)->valeur;
+      (*a) = NULL;
+      ajout_espece(a, esp, car);
+      arbre b = nouveau_noeud();
+      b->valeur = tmp;
+      (*a)->gauche = b;
+    } else {
+      ajout_espece(&(*a)->gauche, esp, car);
+    }
+  } else {
+    if ((*a) == NULL) {
+      (*a) = nouveau_noeud();
+      (*a)->valeur = esp;
+    } else {
+      printf("ERROR:ne peut pas ajouter\n");
+    }
+  }
 }
 
-void liste_carac(Fil f) { 
-	if(f.tete == NULL){
-		printf("\n");
-	}
-	else{
-		Element* b = f.tete;
-		if (!estFeuille(b->a)){
-			printf("%s ",b->a->valeur);
-		}
-		defiler(&f); 
-		if(b->a->gauche != NULL){
-			enfiler(&f,&(b->a->gauche));
-		}
-		if(b->a->droit != NULL){
-			enfiler(&f,&(b->a->droit));
-		}
-		liste_carac(f);
-	}
+void liste_carac(Fil f) {
+  if (f.tete == NULL) {
+    printf("\n");
+  } else {
+    Element *b = f.tete;
+    if (!estFeuille(b->a)) {
+      printf("%s ", b->a->valeur);
+    }
+    defiler(&f);
+    if (b->a->gauche != NULL) {
+      enfiler(&f, &(b->a->gauche));
+    }
+    if (b->a->droit != NULL) {
+      enfiler(&f, &(b->a->droit));
+    }
+    liste_carac(f);
+  }
 }
 
+void liste_carac_2(arbre a) {
+  int h = hauteur(a);
+  int i;
+  for (i = 0; i < h; i++) {
+    printf("NIVEAU %d: ", i);
+    liste_niveau(a, i);
+    printf("\n");
+  }
+}
 
-void liste_carac_2(arbre a) 
-{ 
-    int h = hauteur(a); 
-    int i; 
-    for (i=0; i<h; i++) 
-    { 
-				printf("NIVEAU %d: ",i);
-        liste_niveau(a, i); 
-        printf("\n"); 
-    } 
-} 
-  
 /* Print nodes at a given level */
-void liste_niveau(arbre a, int niveau) 
-{ 
-    if (a == NULL) 
-        return; 
-    if (niveau == 0 && !estFeuille(a)) 
-        printf("%s ", a->valeur); 
-    else if (niveau > 0) 
-    { 
-        liste_niveau(a->gauche, niveau-1); 
-        liste_niveau(a->droit, niveau-1); 
-    } 
-} 
-
+void liste_niveau(arbre a, int niveau) {
+  if (a == NULL)
+    return;
+  if (niveau == 0 && !estFeuille(a))
+    printf("%s ", a->valeur);
+  else if (niveau > 0) {
+    liste_niveau(a->gauche, niveau - 1);
+    liste_niveau(a->droit, niveau - 1);
+  }
+}
