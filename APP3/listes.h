@@ -42,14 +42,14 @@ struct Element {
   Element *suivant;
 };
 
-typedef struct File File;
+typedef struct Fil Fil;
 
-struct File {
+struct Fil {
   Element *tete;
 };
 
-void enfiler(File *file, arbre *a);
-noeud defiler(File *file);
+void enfiler(Fil *file, arbre *a);
+void defiler(Fil *file);
 
 int present(liste_t *l, char *car);
 int presentRec(cellule_t *c, char *car);
@@ -57,19 +57,17 @@ int presentRec(cellule_t *c, char *car);
 Element *nouveau_elt();
 
 struct cellule_a {
-  noeud *n;
-  struct cellule *suivant;
+    noeud *n;
+    struct cellule *suivant;
 };
 
 typedef struct cellule_a cellule_a;
 
 struct liste_a {
-  cellule_a *tete;
+    cellule_a *tete;
 };
 
 typedef struct liste_a liste_a;
 
 cellule_a *nouvelleCellule_a();
-
-void ajout_fin(cellule_t *c, char *s);
 #endif /* _LISTES_H */

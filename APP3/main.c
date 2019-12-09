@@ -47,49 +47,61 @@ int main(int argc, char *argv[]) {
   }
 
   arbre mon_arbre = lire_arbre(f);
+
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
-  char reponse[20];
-  printf("Que voulez-vous faire ? (ajouter espece, rechercher espece ou "
-         "afficher les caracteristiques)\n");
-  scanf("%s", reponse);
-  if (strcmp(reponse, "ajouter") == 0 ||
-      strcmp(reponse, "ajouter espece") == 0) {
-    printf("Quelle espèce voulez-vous ajouter ?\n");
-    char *abc = NULL;
-    scanf("%s\n", abc);
-    printf("Combien a-t-il de caractéristiques ?\n");
-    int nb;
-    scanf("%d\n", &nb);
-    printf("Quelles sont ses caractéristiques ?\n");
-    char *c = NULL;
-    scanf("%s\n", c);
-    cellule_t *one = nouvelleCellule();
-    one->caract = c;
-    int i = 1;
-    while (i != nb) {
-      ajout_fin(one, c);
-      scanf("%s\n", c);
-      i++;
-    }
-    ajout_espece(&mon_arbre, abc, one);
-    printf("Nouvelle hauteur de l'arbre: %d\n", hauteur(mon_arbre));
-  }
-  if (strcmp(reponse, "rechercher") == 0 ||
-      strcmp(reponse, "rechercher espece") == 0) {
-    printf("Quelle espèce recherchez-vous ?\n");
-    char *espece = NULL;
-    scanf("%s\n", espece);
-    liste_t l;
-    l.tete = NULL;
-    rechercher_espece2(mon_arbre, espece, &l);
-    afficher(&l);
-  }
-  if (strcmp(reponse, "afficher") == 0 ||
-      strcmp(reponse, "afficher les caracteristiques") == 0) {
-    liste_carac(mon_arbre);
-  }
-  affiche_arbre(mon_arbre, x);
+  char *espece = "autruche";
+  liste_t l;
+  l.tete = NULL;
+  rechercher_espece2(mon_arbre, espece, &l);
+  afficher(&l);
+
+  char *abc = "abc";
+ 
+  //liste_carac(mon_arbre);
+	
+	
+	//TESTER
+	cellule_t *one = nouvelleCellule();
+  cellule_t *two = nouvelleCellule();
+ 	cellule_t *three = nouvelleCellule();
+ 	cellule_t *four = nouvelleCellule();
+	cellule_t *five = nouvelleCellule();
+  cellule_t *six = nouvelleCellule();
+ 	cellule_t *seven = nouvelleCellule();
+  cellule_t *eight = nouvelleCellule();
+  cellule_t *nine = nouvelleCellule();
+
+        one->caract = "vertebres";
+        one->suivant = two;
+        two->caract = "machoires";
+        two->suivant = three;
+        three->caract = "doigts";
+        three->suivant = four;
+        four->caract = "amnios";
+        four->suivant = five;
+        five->caract = "placenta";
+        five->suivant = six;
+        six->caract = "cornes";
+        six->suivant = seven;
+        seven->caract = "mdr";
+        seven->suivant = NULL;
+
+	ajout_espece(&mon_arbre, abc, one);
+	affiche_arbre(mon_arbre, x);
+	
+	
+	Fil fil; //Creer fil
+	Element def; //Creer element
+	def.a = mon_arbre; 
+	def.suivant = NULL;
+	fil.tete = &def; //1er element du fil
+	
+	liste_carac(fil); //fonction prend un fil au lieu d'un arbre
+	liste_carac_2(mon_arbre);
+	
+  //affiche_arbre(mon_arbre, x);
   fclose(x);
+  printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
 
   return 0;
 }
