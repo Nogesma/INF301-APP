@@ -56,16 +56,16 @@ int main(int argc, char *argv[]) {
       strcmp(reponse, "ajouter espece") == 0) {
     printf("Quelle espèce voulez-vous ajouter ?\n");
     char *abc = NULL;
-    scanf("%s", abc);
+    scanf("%s\n", abc);
     printf("Combien a-t-il de caractéristiques ?\n");
     int nb;
-    scanf("%d", &nb);
-    int i = 1;
-    printf("quelles sont ses caractéristiques ?\n");
+    scanf("%d\n", &nb);
+    printf("Quelles sont ses caractéristiques ?\n");
     char *c = NULL;
     scanf("%s\n", c);
     cellule_t *one = nouvelleCellule();
     one->caract = c;
+    int i = 1;
     while (i != nb) {
       ajout_fin(one, c);
       scanf("%s\n", c);
