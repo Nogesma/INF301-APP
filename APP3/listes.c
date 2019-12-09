@@ -105,3 +105,9 @@ cellule_a *nouvelleCellule_a(void) {
     c->suivant = NULL;
     return c;
 }
+
+void ajout_fin(cellule_t *c, char* s){
+  cellule_t *d=nouvelleCellule();
+  d->caract=s;
+  c->suivant=d;
+}

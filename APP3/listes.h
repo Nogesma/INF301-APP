@@ -70,4 +70,6 @@ struct liste_a {
 typedef struct liste_a liste_a;
 
 cellule_a *nouvelleCellule_a();
+
+void ajout_fin(cellule_t *c, char* s);
 #endif /* _LISTES_H */
