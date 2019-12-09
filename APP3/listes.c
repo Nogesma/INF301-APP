@@ -61,14 +61,14 @@ noeud defiler(File *file) {
   if (file == NULL) {
     exit(EXIT_FAILURE);
   }
-  noeud *nombreDefile=nouveau_noeud();
+  noeud *nombreDefile = nouveau_noeud();
   if (file->tete != NULL) {
-    Element *elementDefile=nouveau_elt();
+    Element *elementDefile = nouveau_elt();
     elementDefile->a = file->tete->a;
-    elementDefile->suivant=file->tete->suivant;
+    elementDefile->suivant = file->tete->suivant;
     nombreDefile->valeur = &elementDefile->a->valeur;
-    nombreDefile->droit=&elementDefile->a->droit;
-    nombreDefile->gauche=&elementDefile->a->gauche;
+    nombreDefile->droit = &elementDefile->a->droit;
+    nombreDefile->gauche = &elementDefile->a->gauche;
     file->tete = elementDefile->suivant;
     free(elementDefile);
   }
@@ -91,23 +91,23 @@ int presentRec(cellule_t *c, char *car) {
 }
 
 Element *nouveau_elt(void) {
-    Element *n = (Element *)malloc(sizeof(Element));
-    assert(n != NULL);
-    n->a = NULL;
-    n->suivant = NULL;
-    return n;
+  Element *n = (Element *)malloc(sizeof(Element));
+  assert(n != NULL);
+  n->a = NULL;
+  n->suivant = NULL;
+  return n;
 }
 
 cellule_a *nouvelleCellule_a(void) {
-    cellule_a *c;
-    c = (cellule_a *)malloc(sizeof(cellule_a));
-    c->n =nouveau_noeud();
-    c->suivant = NULL;
-    return c;
+  cellule_a *c;
+  c = (cellule_a *)malloc(sizeof(cellule_a));
+  c->n = nouveau_noeud();
+  c->suivant = NULL;
+  return c;
 }
 
-void ajout_fin(cellule_t *c, char* s){
-  cellule_t *d=nouvelleCellule();
-  d->caract=s;
-  c->suivant=d;
+void ajout_fin(cellule_t *c, char *s) {
+  cellule_t *d = nouvelleCellule();
+  d->caract = s;
+  c->suivant = d;
 }

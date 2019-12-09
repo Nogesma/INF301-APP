@@ -48,42 +48,44 @@ int main(int argc, char *argv[]) {
 
   arbre mon_arbre = lire_arbre(f);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
-  char* reponse=NULL;
-  printf("Que voulez-vous faire ? (ajouter espece, rechercher espece ou afficher les caracteristiques)\n");
-  scanf("%s",reponse);
-  char *ajout="ajouter";
-  char *ajout2="ajouter espece";
-  if (strcmp(reponse,ajout)==0 || strcmp(reponse,ajout2)==0){
+  char reponse[20];
+  printf("Que voulez-vous faire ? (ajouter espece, rechercher espece ou "
+         "afficher les caracteristiques)\n");
+  scanf("%s", reponse);
+  if (strcmp(reponse, "ajouter") == 0 ||
+      strcmp(reponse, "ajouter espece") == 0) {
     printf("Quelle espèce voulez-vous ajouter ?\n");
-    char *abc=NULL;
+    char *abc = NULL;
     scanf("%s", abc);
     printf("Combien a-t-il de caractéristiques ?\n");
     int nb;
     scanf("%d", &nb);
-    int i=1;
+    int i = 1;
     printf("quelles sont ses caractéristiques ?\n");
-    char* c=NULL;
+    char *c = NULL;
     scanf("%s\n", c);
-    cellule_t *one=nouvelleCellule();
-    one->caract=c;
-    while (i!=nb){
-      ajout_fin(one,c);
-      scanf("%s\n",c);
+    cellule_t *one = nouvelleCellule();
+    one->caract = c;
+    while (i != nb) {
+      ajout_fin(one, c);
+      scanf("%s\n", c);
       i++;
     }
     ajout_espece(&mon_arbre, abc, one);
     printf("Nouvelle hauteur de l'arbre: %d\n", hauteur(mon_arbre));
   }
-  if (strcmp(reponse,"rechercher")==0 || strcmp(reponse,"rechercher espece")==0){
+  if (strcmp(reponse, "rechercher") == 0 ||
+      strcmp(reponse, "rechercher espece") == 0) {
     printf("Quelle espèce recherchez-vous ?\n");
-    char *espece=NULL;
+    char *espece = NULL;
     scanf("%s\n", espece);
     liste_t l;
     l.tete = NULL;
     rechercher_espece2(mon_arbre, espece, &l);
     afficher(&l);
   }
-  if (strcmp(reponse,"afficher")==0 || strcmp(reponse,"afficher les caracteristiques")==0){
+  if (strcmp(reponse, "afficher") == 0 ||
+      strcmp(reponse, "afficher les caracteristiques") == 0) {
     liste_carac(mon_arbre);
   }
   affiche_arbre(mon_arbre, x);

@@ -100,39 +100,34 @@ int rechercher_espece2(arbre racine, char *espece, liste_t *seq) {
   return 1;
 }
 
-void ajout_espece(arbre *a, char *esp,cellule_t *car){
-  if (length(car)!=0){
-                if ((*a) == NULL){
-                        (*a) = nouveau_noeud();
-                        (*a)->valeur = car->caract;
-                        car = car->suivant;
-                        ajout_espece(&(*a)->droit,esp,car);
-                }
-                else if(strcmp((*a)->valeur,car->caract) == 0){
-                        car = car->suivant;
-                        ajout_espece(&(*a)->droit,esp,car);
-                }
-                else if(estFeuille(*a)){
-                        char *tmp = (*a)->valeur;
-                        (*a) = NULL;
-                        ajout_espece(a,esp,car);
-                        arbre b = nouveau_noeud();
-                        b->valeur = tmp;
-                        (*a)->gauche = b;
-                }
-                else{
-                        ajout_espece(&(*a)->gauche,esp,car);
-                }
-        }
-        else{
-                if ((*a) == NULL){
-                        (*a) = nouveau_noeud();
-                        (*a)->valeur = esp;
-                }
-                else{
-                        printf("ERROR:ne peut pas aajouter\n");
-                }
-        }
+void ajout_espece(arbre *a, char *esp, cellule_t *car) {
+  if (length(car) != 0) {
+    if ((*a) == NULL) {
+      (*a) = nouveau_noeud();
+      (*a)->valeur = car->caract;
+      car = car->suivant;
+      ajout_espece(&(*a)->droit, esp, car);
+    } else if (strcmp((*a)->valeur, car->caract) == 0) {
+      car = car->suivant;
+      ajout_espece(&(*a)->droit, esp, car);
+    } else if (estFeuille(*a)) {
+      char *tmp = (*a)->valeur;
+      (*a) = NULL;
+      ajout_espece(a, esp, car);
+      arbre b = nouveau_noeud();
+      b->valeur = tmp;
+      (*a)->gauche = b;
+    } else {
+      ajout_espece(&(*a)->gauche, esp, car);
+    }
+  } else {
+    if ((*a) == NULL) {
+      (*a) = nouveau_noeud();
+      (*a)->valeur = esp;
+    } else {
+      printf("ERROR:ne peut pas aajouter\n");
+    }
+  }
 }
 
 void liste_carac(arbre a) {
@@ -170,5 +165,5 @@ void liste_carac(arbre a) {
       enfiler(&f, &n.droit);
     }
   }
-//  remove("temp.txt");
+  //  remove("temp.txt");
 }
