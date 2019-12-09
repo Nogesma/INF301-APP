@@ -38,8 +38,8 @@ int main(int argc, char *argv[]) {
 
   debug("Ouverture de %s\n", fichier);
   FILE *f = fopen(fichier, "r");
-
   FILE *x = fopen("arbre.dot", "w+");
+
   if (!f) {
     fprintf(stderr, "Erreur à l'ouverture du fichier `%s'\n", fichier);
     perror(fichier);
@@ -47,29 +47,52 @@ int main(int argc, char *argv[]) {
   }
 
   arbre mon_arbre = lire_arbre(f);
-
-  affiche_arbre(mon_arbre, x);
   printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
-  char *espece = "autruche";
-  liste_t l;
-  l.tete = NULL;
-  rechercher_espece(mon_arbre, espece, &l);
-  afficher(&l);
-  
-  char *abc = "abc";
-  
-  ajout_espece(&mon_arbre,abc,l.tete);
-  
-  
-  cellule_t *c = nouvelleCellule();
-  c = l.tete;
-  while (c != NULL) {
-    printf("%s ", c->caract);
-    c = c->suivant;
+  char reponse[20];
+  printf("Que voulez-vous faire ? (ajouter espece, rechercher espece ou "
+         "afficher les caracteristiques)\n");
+  scanf("%s", reponse);
+  if (strcmp(reponse, "ajouter") == 0 ||
+      strcmp(reponse, "ajouter espece") == 0) {
+    printf("Quelle espèce voulez-vous ajouter ?\n");
+    char abc[50];
+    scanf("%s", abc);
+    printf("Combien a-t-il de caractéristiques ?\n");
+    int nb;
+    scanf("%d", &nb);
+    printf("Quelles sont ses caractéristiques ?\n");
+    char c[50];
+    scanf("%s", c);
+    cellule_t *one = nouvelleCellule();
+    one->caract = c;
+    int i = 1;
+    while (i != nb) {
+      ajout_fin(one, c);
+      scanf("%s", c);
+      i++;
+    }
+    ajout_espece(&mon_arbre, abc, one);
+    printf("Nouvelle hauteur de l'arbre: %d\n", hauteur(mon_arbre));
+  }
+  if (strcmp(reponse, "rechercher") == 0 ||
+      strcmp(reponse, "rechercher espece") == 0) {
+    printf("Quelle espèce recherchez-vous ?\n");
+    char espece[50];
+    scanf("%s", espece);
+    liste_t l;
+    l.tete = NULL;
+    rechercher_espece(mon_arbre, espece, &l);
+    if (l.tete->caract == NULL)
+      printf("L'espece n'est pas dans l'arbre\n");
+    else
+      afficher(&l);
+  }
+  if (strcmp(reponse, "afficher") == 0 ||
+      strcmp(reponse, "afficher les caracteristiques") == 0) {
+    liste_carac_2(mon_arbre);
   }
   affiche_arbre(mon_arbre, x);
-  printf("Hauteur de l'arbre: %d\n", hauteur(mon_arbre));
-  
+  fclose(x);
 
   return 0;
 }

@@ -20,10 +20,10 @@ void compter(arbre a, int *nb_car, int *nb_esp);
  */
 
 int rechercher_espece(arbre racine, char *espece, liste_t *seq);
-int rechercher_esp(arbre racine, char *espece, liste_t *seq);
-int rechercher_espece2(arbre racine, char *espece, liste_t *seq);
 
-void ajout_espece(arbre *a, char *esp,cellule_t *car);
-void liste_carac(arbre a);
+void ajout_espece(arbre *a, char *esp, cellule_t *car);
+void liste_carac(Fil f);
 
+void liste_carac_2(arbre a);
+void liste_niveau(arbre a, int niveau);
 #endif

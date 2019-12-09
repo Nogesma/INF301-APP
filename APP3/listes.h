@@ -36,19 +36,41 @@ void detruireCellule(cellule_t *cel);
 int length(cellule_t *cel);
 
 typedef struct Element Element;
+
 struct Element {
   arbre a;
   Element *suivant;
 };
 
-typedef struct File File;
-struct File {
+typedef struct Fil Fil;
+
+struct Fil {
   Element *tete;
 };
 
-void enfiler(File *file, char *nvcar);
-arbre defiler(File *file);
+void enfiler(Fil *file, arbre *a);
+void defiler(Fil *file);
 
 int present(liste_t *l, char *car);
 int presentRec(cellule_t *c, char *car);
+
+Element *nouveau_elt();
+
+struct cellule_a {
+  noeud *n;
+  struct cellule *suivant;
+};
+
+typedef struct cellule_a cellule_a;
+
+struct liste_a {
+  cellule_a *tete;
+};
+
+typedef struct liste_a liste_a;
+
+cellule_a *nouvelleCellule_a();
+
+void ajout_fin(cellule_t *c, char *s);
+
 #endif /* _LISTES_H */
